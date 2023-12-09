@@ -40,38 +40,42 @@ wire  [9:0] green_out;
 /*==================================encode================================================================*/
 //red--------------------------------------------------------------------------------------------
   encode   inst_encode_red(
-    /*input              */.clk        (clk_1x    ), //system clock 50MHz
-    /*input               */.rst_n      (rst_n      ), //reset, low valid
-    /*input             */.hsync        (1'b0     ),
-    /*input             */.vsync        (1'b0     ),
-    /*input             */.de           (rgb_vlaid  ),
-    /*input       [7:0] */.data_in      (red        ),
-    /*output  reg [9:0] */.data_out     (red_out    )
-  ); 
+    .clkin      (clk_1x),
+    .rstin	    (!rst_n),
+    
+    .din        (red),
+    .c0			(1'b0),
+    .c1			(1'b0),
+    .de			(rgb_vlaid),
+    .dout		(red_out)
+    ) ;
 
 
 //blue--------------------------------------------------------------------------------------------
   encode   inst_encode_blue(
-    /*input              */.clk        (clk_1x    ), //system clock 50MHz
-    /*input               */.rst_n      (rst_n      ), //reset, low valid
-    /*input             */.hsync        (hsync      ),
-    /*input             */.vsync        (vsync      ),
-    /*input             */.de           (rgb_vlaid  ),
-    /*input       [7:0] */.data_in      (blue        ),
-    /*output  reg [9:0] */.data_out     (blue_out    )
-  ); 
+    .clkin      (clk_1x),
+    .rstin	    (!rst_n),
+    
+    .din        (blue),
+    .c0			(hsync),
+    .c1			(vsync),
+    .de			(rgb_vlaid),
+    .dout		(blue_out)
+    ) ;
 
 
 //green--------------------------------------------------------------------------------------------
   encode   inst_encode_green(
-    /*input              */.clk        (clk_1x    ), //system clock 50MHz
-    /*input               */.rst_n      (rst_n      ), //reset, low valid
-    /*input             */.hsync        (1'b0      ),
-    /*input             */.vsync        (1'b0      ),
-    /*input             */.de           (rgb_vlaid  ),
-    /*input       [7:0] */.data_in      (green        ),
-    /*output  reg [9:0] */.data_out     (green_out    )
-  ); 
+  .clkin      (clk_1x),
+    .rstin	    (!rst_n),
+    
+    .din        (green),
+    .c0			(1'b0 ),
+    .c1			(1'b0 ),
+    .de			(rgb_vlaid),
+    .dout		(green_out)
+    ) ;
+  
 
 `ifdef yuanyu
 /*==================================并转串================================================================*/

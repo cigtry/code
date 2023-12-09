@@ -30,9 +30,9 @@ module video_driver(
     output          video_de,     //数据使能
     output  [23:0]  video_rgb,    //RGB888颜色数据
     
-    input   [23:0]  pixel_data,   //像素点数据
-    output  [10:0]  pixel_xpos,   //像素点横坐标
-    output  [10:0]  pixel_ypos    //像素点纵坐标
+    input   [23:0]  pixel_data   //像素点数据
+    // output  [10:0]  pixel_xpos,   //像素点横坐标
+    // output  [10:0]  pixel_ypos    //像素点纵坐标
 );
 
 //parameter define
@@ -82,8 +82,8 @@ assign data_req = (((cnt_h >= H_SYNC+H_BACK-1'b1) &&
                   ?  1'b1 : 1'b0;
 
 //像素点坐标
-assign pixel_xpos = data_req ? (cnt_h - (H_SYNC + H_BACK - 1'b1)) : 11'd0;
-assign pixel_ypos = data_req ? (cnt_v - (V_SYNC + V_BACK - 1'b1)) : 11'd0;
+// assign pixel_xpos = data_req ? (cnt_h - (H_SYNC + H_BACK - 1'b1)) : 11'd0;
+// assign pixel_ypos = data_req ? (cnt_v - (V_SYNC + V_BACK - 1'b1)) : 11'd0;
 
 //行计数器对像素时钟计数
 always @(posedge pixel_clk ) begin

@@ -198,7 +198,7 @@ module cmos_config(
 		 53 :lut_data	= 	{24'h3004_ff}; // enable clocks
 		 54 :lut_data	= 	{24'h300e_58}; //MIPI power down,DVP enable
 		 55 :lut_data	= 	{24'h302e_00};
-		 56 :lut_data	= 	{24'h4300_23}; // RGB,
+		 56 :lut_data	= 	{24'h4300_61}; // RGB,
 		 57 :lut_data	= 	{24'h501f_01}; // ISP RGB
 		 58 :lut_data	= 	{24'h440e_00};
 		 59 :lut_data	= 	{24'h5000_a7}; // Lenc on, raw gamma on, BPC on, WPC on, CIP on
