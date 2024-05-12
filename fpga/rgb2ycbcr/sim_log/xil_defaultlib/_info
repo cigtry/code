@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maccura/Desktop/DIP/fpga/rgb2ycbcr/sim_log
+vrgb2ycbcr
+Z1 !s110 1713158351
+!i10b 1
+!s100 5WQM:>E35_:VZ<b=;denz3
+IhO?ng`9Q?EeM;mIVG<4a@3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1712826992
+8../rgb2ycbcr.v
+F../rgb2ycbcr.v
+Z3 L0 16
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1713158351.000000
+!s107 ../rgb2ycbcr.v|
+!s90 -incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 1
+!s102 +cover
+o+cover -work xil_defaultlib
+Z6 tCvgOpt 0
+vtestbench
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 6PKcMhoN?`aFVA4c9FA5d2
+IhK[[4H<W1gS<ObLn4CTcW2
+R2
+!s105 testbench_sv_unit
+S1
+R0
+w1712827084
+8../testbench.sv
+F../testbench.sv
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../testbench.sv|
+!s90 -sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 1
+o-sv -work xil_defaultlib
+R6

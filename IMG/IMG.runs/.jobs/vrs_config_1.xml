@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="zynq_processing_system7_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_axi_vdma_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_axi_vdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_v_tc_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_v_tc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_v_axi4s_vid_out_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_v_axi4s_vid_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_vga2hdmi_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_vga2hdmi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_clk_wiz_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_util_vector_logic_0_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_axi_smc_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_xbar_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="zynq_auto_pc_0_synth_1" LaunchDir="C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

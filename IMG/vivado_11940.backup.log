@@ -1,0 +1,336 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Apr 26 16:18:08 2024
+# Process ID: 11940
+# Current directory: C:/Users/maccura/Desktop/DIP/IMG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3420 C:\Users\maccura\Desktop\DIP\IMG\IMG.xpr
+# Log file: C:/Users/maccura/Desktop/DIP/IMG/vivado.log
+# Journal file: C:/Users/maccura/Desktop/DIP/IMG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/maccura/Desktop/DIP/IMG/IMG.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/software/vivado2018.3/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 891.203 ; gain = 272.098
+open_bd_design {C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:module_ref:vga2hdmi:1.0 - vga2hdmi_0
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_1x(clk) and /vga2hdmi_0/clk_1x(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_tc_0/clken(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_tc_0/resetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /vga2hdmi_0/rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/aclken(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/vid_io_out_ce(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_5x(clk) and /vga2hdmi_0/clk_5x(undef)
+Successfully read diagram <zynq> from BD file <C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd>
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: zynq_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1329.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'zynq_wrapper' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'zynq' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:589]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axi_smc_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_smc_0' (1#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zynq_axi_vdma_0_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_axi_vdma_0_0' (2#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_vdma_0' of module 'zynq_axi_vdma_0_0' requires 42 connections, but only 39 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:808]
+INFO: [Synth 8-6157] synthesizing module 'zynq_clk_wiz_0_1' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_clk_wiz_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_clk_wiz_0_1' (3#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_clk_wiz_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'zynq_processing_system7_0_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_processing_system7_0_0' (4#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'zynq_processing_system7_0_0' requires 107 connections, but only 97 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:854]
+INFO: [Synth 8-6157] synthesizing module 'zynq_ps7_0_axi_periph_0' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:1081]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_MVBVET' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_MVBVET' (5#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1LJIWFN' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1LJIWFN' (6#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:137]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_15A5WQ8' [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:283]
+INFO: [Synth 8-6157] synthesizing module 'zynq_auto_pc_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_auto_pc_0' (7#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_15A5WQ8' (8#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:283]
+INFO: [Synth 8-6157] synthesizing module 'zynq_xbar_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_xbar_0' (9#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_ps7_0_axi_periph_0' (10#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:1081]
+WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'zynq_ps7_0_axi_periph_0' requires 81 connections, but only 70 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:952]
+INFO: [Synth 8-6157] synthesizing module 'zynq_rst_ps7_0_100M_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_rst_ps7_0_100M_0' (11#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'zynq_rst_ps7_0_100M_0' requires 10 connections, but only 6 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:1023]
+INFO: [Synth 8-6157] synthesizing module 'zynq_util_vector_logic_0_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_util_vector_logic_0_0' (12#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zynq_v_axi4s_vid_out_0_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_v_axi4s_vid_out_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_v_axi4s_vid_out_0_0' (13#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_v_axi4s_vid_out_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_0' of module 'zynq_v_axi4s_vid_out_0_0' requires 31 connections, but only 23 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:1033]
+INFO: [Synth 8-6157] synthesizing module 'zynq_v_tc_0_0' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_v_tc_0_0' (14#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_v_tc_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_tc_0' of module 'zynq_v_tc_0_0' requires 10 connections, but only 9 given [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:1057]
+INFO: [Synth 8-6157] synthesizing module 'zynq_vga2hdmi_0_1' [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_vga2hdmi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_vga2hdmi_0_1' (15#1) [C:/Users/maccura/Desktop/DIP/IMG/.Xil/Vivado-11940-fy7245m220402/realtime/zynq_vga2hdmi_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zynq' (16#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/synth/zynq.v:589]
+INFO: [Synth 8-6155] done synthesizing module 'zynq_wrapper' (17#1) [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_15A5WQ8 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_15A5WQ8 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1LJIWFN has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1LJIWFN has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1LJIWFN has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1LJIWFN has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_MVBVET has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_MVBVET has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_MVBVET has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_MVBVET has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design zynq_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.098 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/zynq_axi_smc_0.dcp' for cell 'zynq_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0.dcp' for cell 'zynq_i/axi_vdma_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.dcp' for cell 'zynq_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.dcp' for cell 'zynq_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0.dcp' for cell 'zynq_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_util_vector_logic_0_0/zynq_util_vector_logic_0_0.dcp' for cell 'zynq_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0.dcp' for cell 'zynq_i/v_axi4s_vid_out_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0.dcp' for cell 'zynq_i/v_tc_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_vga2hdmi_0_1/zynq_vga2hdmi_0_1.dcp' for cell 'zynq_i/vga2hdmi_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_xbar_0/zynq_xbar_0.dcp' for cell 'zynq_i/ps7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0.dcp' for cell 'zynq_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 230 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. zynq_i/clk_wiz_0/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'zynq_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc] for cell 'zynq_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc] for cell 'zynq_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0.xdc] for cell 'zynq_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0.xdc] for cell 'zynq_i/axi_vdma_0/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0_board.xdc] for cell 'zynq_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0_board.xdc] for cell 'zynq_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0.xdc] for cell 'zynq_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0.xdc] for cell 'zynq_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_board.xdc] for cell 'zynq_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_board.xdc] for cell 'zynq_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0.xdc] for cell 'zynq_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0.xdc] for cell 'zynq_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_board.xdc] for cell 'zynq_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_board.xdc] for cell 'zynq_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.xdc] for cell 'zynq_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.xdc] for cell 'zynq_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1577.133 ; gain = 0.000
+Parsing XDC File [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/constrs_1/new/img.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'VIRTUAL_clk_5x_zynq_clk_wiz_0_1' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/constrs_1/new/img.xdc:6]
+Finished Parsing XDC File [C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/constrs_1/new/img.xdc]
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_clocks.xdc] for cell 'zynq_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_clocks.xdc] for cell 'zynq_i/axi_vdma_0/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_clocks.xdc] for cell 'zynq_i/v_tc_0/U0'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_clocks.xdc] for cell 'zynq_i/v_tc_0/U0'
+Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'zynq_i/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'zynq_i/v_axi4s_vid_out_0/inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/CDC_SINGLE_LOCKED_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/CDC_SINGLE_LOCKED_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/CDC_SINGLE_REMAP_UNDERFLOW_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/CDC_SINGLE_REMAP_UNDERFLOW_INST/xpm_cdc_single_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'zynq_i/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'zynq_i/axi_vdma_0/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'zynq_i/axi_vdma_0/U0/GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I/GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'zynq_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'zynq_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'zynq_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'zynq_i/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/zynq_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/zynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1577.207 ; gain = 0.000
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1577.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 43 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 43 instances
+
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Common 17-14] Message 'Designutils 20-3303' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 1600.977 ; gain = 271.879
+62 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 1600.977 ; gain = 271.879
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 17:15:43 2024...

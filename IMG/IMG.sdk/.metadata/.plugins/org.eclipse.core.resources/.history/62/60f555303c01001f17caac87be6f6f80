@@ -1,0 +1,195 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "xil_io.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "ff.h"
+#include "xdevcfg.h"
+#include "sleep.h"
+
+#define FILE_NAME "HAHA.txt"
+
+const char src_str[30] = "kunkunzuibang";
+static FATFS fatfs;
+
+#define VDMA_BASEADDR XPAR_AXI_VDMA_0_BASEADDR
+#define VDMA_BUFFER_0 0x08000000
+#define STRIDE 1280
+#define HSIZE  1280
+#define VSIZE  720
+#define VIDEO_LENTH ( HSIZE*VSIZE)
+#define BUF_SIZE VIDEO_LENTH*3
+
+
+//初始化文件系统
+int platform_init_fs()
+{
+	FRESULT status;
+	TCHAR *Path = "0:/";
+	BYTE work[FF_MAX_SS];
+	//注册一个工作区
+	//在使用任何其他文件函数之前，必须使用f_mount函数位每个使用卷注册一个工作区
+	status = f_mount(&fatfs,Path,1);//挂载SD卡
+	if(status != FR_OK){
+		xil_printf("Volume is not FAT formated;formating FAT\r\n");
+		status = f_mkfs(Path , FM_FAT32 , 0 , work ,sizeof work);
+		if(status != FR_OK){
+			xil_printf("Unable to format FATfs\r\n");
+			return -1;
+		}
+	}
+	status = f_mount(&fatfs , Path , 1);
+	if(status != FR_OK){
+		xil_printf("Unable to format FATfs\r\n");
+		return -1;
+	}
+	return 0;
+}
+//挂载 SD(TF)卡
+int sd_mount()
+ {
+ FRESULT status;
+ //初始化文件系统（挂载 SD 卡，如果挂载不成功，则格式化 SD 卡）
+ status = platform_init_fs();
+ if(status){
+ xil_printf("ERROR: f_mount returned %d!\n",status);
+ return XST_FAILURE;
+ }
+ return XST_SUCCESS;
+ }
+
+ //SD 卡写数据
+ int sd_write_data(char *file_name,u32 src_addr,u32 byte_len)
+ {
+ FIL fil; //文件对象
+ UINT bw; //f_write 函数返回已写入的字节数
+
+ //打开一个文件,如果不存在，则创建一个文件
+  f_open(&fil,file_name,FA_CREATE_ALWAYS | FA_WRITE);
+  //移动打开的文件对象的文件读/写指针 0:指向文件开头
+  f_lseek(&fil, 0);
+  //向文件中写入数据
+  f_write(&fil,(void*) src_addr,byte_len,&bw);
+  //关闭文件
+  f_close(&fil);
+  return 0;
+  }
+
+  //SD 卡读数据
+  int sd_read_data(char *file_name,u32 src_addr,u32 byte_len)
+  {
+  FIL fil; //文件对象
+  UINT br; //f_read 函数返回已读出的字节数
+
+  //打开一个只读的文件
+  f_open(&fil,file_name,FA_READ);
+  //移动打开的文件对象的文件读/写指针 0:指向文件开头
+  f_lseek(&fil,0);
+  //从 SD 卡中读出数据
+  f_read(&fil,(void*)src_addr,byte_len,&br);
+  //关闭文件
+  f_close(&fil);
+  return 0;
+  }
+
+
+  void show_img( const unsigned char * addr , u32 size_x,u32 size_y)
+  {
+	  u32 x = 0;
+	  u32 y = 0;
+	  u32 r,g,b;
+	  for(y = size_y ; y >0;y--)
+	  {
+		  for(x = 0 ; x < size_x;x++)
+		  	  {
+		  		  b = * (addr++);
+		  		  g = * (addr++);
+		  		  r = * (addr++);
+		  		  Xil_Out32((VDMA_BUFFER_0 + (((y - 1) * size_x)+x) *4),((r<<16)|(g << 8)|(b<<0)));
+		  	  }
+	  }
+	  Xil_DCacheFlush();
+  }
+
+  void vdma_init()
+  {
+	  int i;
+	  for (i = 0; i <VIDEO_LENTH ; i++)
+	  {
+		  Xil_Out32( VDMA_BUFFER_0 + i*4 , 0);
+	  }
+	Xil_DCacheFlush();
+  	Xil_Out32(VDMA_BASEADDR,0x1);//开启vdma
+    Xil_Out32(VDMA_BASEADDR+0x5c,VDMA_BUFFER_0);//设置vdma映射内存起始地址
+  	Xil_Out32(VDMA_BASEADDR+0x58,STRIDE*3);//设置每行的
+	Xil_Out32(VDMA_BASEADDR+0x54,HSIZE*3);//设置每行的像素宽度=像素数x像素字节数
+  	Xil_Out32(VDMA_BASEADDR+0x50,VSIZE);//设置显示器高度像素数;
+
+  }
+
+
+  //从SD卡中读取BMP图片
+  void load_sd_bmp(u8 *frame,	u8 cnt)
+  {
+  	static 	FATFS fatfs;
+  	FIL 	fil;
+  	UINT 	*bmp_width,*bmp_height,*bmp_size;
+  	u8 		bmp_head[54];
+  	UINT 	br;
+  	u8      *frame_col;
+  	int 	i;
+
+  	//挂载文件系统
+  	f_mount(&fatfs,"",1);
+
+  	//打开文件
+  		f_open(&fil,"ikun.bmp",FA_READ);
+
+
+  	//移动文件读写指针到文件开头
+  	f_lseek(&fil,0);
+
+  	//读取BMP文件头
+  	f_read(&fil,bmp_head,54,&br);
+  	xil_printf("picture head: \n\r");
+  	for(i=0;i<54;i++)
+  		xil_printf(" %x",bmp_head[i]);
+
+  	//打印BMP图片分辨率和大小
+  	bmp_width  = (UINT *)(bmp_head + 0x12);//1920*3*
+  	bmp_height = (UINT *)(bmp_head + 0x16);//1080
+  	bmp_size   = (UINT *)(bmp_head + 0x22);
+  	xil_printf("\n width = %d, height = %d, size = %d bytes \n\r",*bmp_width,*bmp_height,*bmp_size);
+
+      //这种写入内存的方法才是对的
+  	for(int i = 0;i<*bmp_height;i++)
+  	{
+  		frame_col = frame + (1080 - i - 1)*1920*4;//最后一行的第一个列开始显示
+  		for(int j = 0; j<*bmp_width; j++)
+  		{
+  			f_read(&fil,frame_col,3,&br);
+  			*(frame_col+3) = 0x00;//对应我的AXI总线fifo读取数据的方式
+  			frame_col = frame_col + 4;
+  		}
+  	}
+  	//关闭文件
+  	f_close(&fil);
+
+  //	Xil_DCacheFlush();     //刷新Cache，数据更新至DDR3中（如果主函数没有关闭cache，这里就需要刷新到DDR中）
+  	xil_printf("show bmp\n\r");
+  }
+
+
+  u8 RD_BUFFER[BUF_SIZE] __attribute__ ((aligned(32)));
+int main(void)
+{
+
+
+	vdma_init();
+	sd_mount();
+	BMP_Picture((u8 *)"ikun.bmp",RD_BUFFER,BUF_SIZE);
+	show_img(RD_BUFFER , 1280 , 720);
+	return 0;
+}

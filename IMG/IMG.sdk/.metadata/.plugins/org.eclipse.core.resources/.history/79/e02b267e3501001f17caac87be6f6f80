@@ -1,0 +1,248 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "xil_io.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "ff.h"
+#include "xdevcfg.h"
+#include "sleep.h"
+
+#define FILE_NAME "HAHA.txt"
+
+const char src_str[30] = "kunkunzuibang";
+static FATFS fatfs;
+
+#define VDMA_BASEADDR XPAR_AXI_VDMA_0_BASEADDR
+#define VDMA_BUFFER_0 0x08000000
+#define STRIDE 1280
+#define HSIZE  1280
+#define VSIZE  720
+#define VIDEO_LENTH ( HSIZE*VSIZE)
+#define BUF_SIZE VIDEO_LENTH*3
+
+typedef struct
+{
+	uint16_t bfType;        //文件类型，BMP格式为字符串BM
+	uint32_t bfSize;		//图片大小，单位为KB
+	uint16_t bfReserved1;	//保留位
+	uint16_t bfReserved2;	//保留位
+	uint32_t bfOffBits;  	//从文件头到实际图像数据之间的字节偏移量
+} BMP_FileHeaderTypeDef;
+
+typedef struct
+{
+	uint32_t bitSize;		 //BMP_InfoHeaderTypeDef结构体所需要的字节数
+	uint32_t biWidth;		 //图片宽度，像素位单位
+	int32_t  biHeight;		 //图片高度，像素为单位。正为倒立，负为正向。
+	uint16_t biPlanes;		 //颜色平面数，总为1
+	uint16_t biBitCount;	 //比特数/像素。其值为：1、4、8、16、24或32
+	uint32_t biCompression;  //数据压缩类型
+	uint32_t biSizeImage;	 //图像大小
+	uint32_t biXPelsPerMeter;//水平分辨率
+	uint32_t biYPelsPerMeter;//垂直分辨率
+	uint32_t biClrUsed;		 //颜色索引数
+	uint32_t biClrImportant; //重要颜色索引数
+
+}BMP_InfoHeaderTypeDef;
+
+void BMP_ReadHeader(uint8_t *header, BMP_HeaderTypeDef *bmp)
+{
+
+	bmp->fileHeader.bfType = ((*header) << 8) | (*(header + 1));
+	header += 2;
+
+	bmp->fileHeader.bfSize = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                         ((*(header + 1)) << 8) | (*header);
+	header += 8;
+
+	bmp->fileHeader.bfOffBits = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                            ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.bitSize = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                          ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.biWidth = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                          ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.biHeight = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                           ((*(header + 1)) << 8) | (*header);
+	header += 6;
+
+	bmp->infoHeader.biBitCount = ((*(header + 1)) << 8) | (*header);
+
+	header += 2;
+
+	bmp->infoHeader.biCompression = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.biSizeImage = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                              ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.biXPelsPerMeter = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                  ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader.biYPelsPerMeter = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                  ((*(header + 1)) << 8) | (*header);
+}
+
+void BMP_Picture(uint8_t *dir , uint8_t  * buf ,uint32_t len)
+{
+		FRESULT res;
+		FIL fsrc;
+		UINT  br;
+		UINT  a;
+
+		uint8_t buffer[1024];
+
+		BMP_HeaderTypeDef bmpHeader;
+
+		/* 打开要读取的文件 */
+		res = f_open(&fsrc, (const TCHAR*)dir, FA_READ);
+
+		if(res == FR_OK)   //打开成功
+	    {
+			/* 读取BMP文件的文件信息 */
+	        res = f_read(&fsrc, buffer, sizeof(buffer), &br);
+
+			/* 将数组里面的数据放入到结构数组中，并排序好 */
+			BMP_ReadHeader(buffer, &bmpHeader);
+
+			a = bmpHeader.fileHeader.bfOffBits;    //去掉文件信息才开始是像素数据
+
+			res=f_lseek(&fsrc, a);
+			if(res)
+			{
+				return 0;
+			}
+			res = f_read(&fsrc, buf, len, &br);
+	    }
+    f_close(&fsrc);  //不论是打开，还是新建文件，一定记得关闭
+}
+
+
+
+//初始化文件系统
+int platform_init_fs()
+{
+	FRESULT status;
+	TCHAR *Path = "0:/";
+	BYTE work[FF_MAX_SS];
+	//注册一个工作区
+	//在使用任何其他文件函数之前，必须使用f_mount函数位每个使用卷注册一个工作区
+	status = f_mount(&fatfs,Path,1);//挂载SD卡
+	if(status != FR_OK){
+		xil_printf("Volume is not FAT formated;formating FAT\r\n");
+		status = f_mkfs(Path , FM_FAT32 , 0 , work ,sizeof work);
+		if(status != FR_OK){
+			xil_printf("Unable to format FATfs\r\n");
+			return -1;
+		}
+	}
+	status = f_mount(&fatfs , Path , 1);
+	if(status != FR_OK){
+		xil_printf("Unable to format FATfs\r\n");
+		return -1;
+	}
+	return 0;
+}
+//挂载 SD(TF)卡
+int sd_mount()
+ {
+ FRESULT status;
+ //初始化文件系统（挂载 SD 卡，如果挂载不成功，则格式化 SD 卡）
+ status = platform_init_fs();
+ if(status){
+ xil_printf("ERROR: f_mount returned %d!\n",status);
+ return XST_FAILURE;
+ }
+ return XST_SUCCESS;
+ }
+
+ //SD 卡写数据
+ int sd_write_data(char *file_name,u32 src_addr,u32 byte_len)
+ {
+ FIL fil; //文件对象
+ UINT bw; //f_write 函数返回已写入的字节数
+
+ //打开一个文件,如果不存在，则创建一个文件
+  f_open(&fil,file_name,FA_CREATE_ALWAYS | FA_WRITE);
+  //移动打开的文件对象的文件读/写指针 0:指向文件开头
+  f_lseek(&fil, 0);
+  //向文件中写入数据
+  f_write(&fil,(void*) src_addr,byte_len,&bw);
+  //关闭文件
+  f_close(&fil);
+  return 0;
+  }
+
+  //SD 卡读数据
+  int sd_read_data(char *file_name,u32 src_addr,u32 byte_len)
+  {
+  FIL fil; //文件对象
+  UINT br; //f_read 函数返回已读出的字节数
+
+  //打开一个只读的文件
+  f_open(&fil,file_name,FA_READ);
+  //移动打开的文件对象的文件读/写指针 0:指向文件开头
+  f_lseek(&fil,0);
+  //从 SD 卡中读出数据
+  f_read(&fil,(void*)src_addr,byte_len,&br);
+  //关闭文件
+  f_close(&fil);
+  return 0;
+  }
+
+
+  void show_img( const unsigned char * addr , u32 size_x,u32 size_y)
+  {
+	  u32 x = 0;
+	  u32 y = 0;
+	  u32 r,g,b;
+	  for(y = size_y ; y >0;y--)
+	  {
+		  for(x = 0 ; x < size_x;x++)
+		  	  {
+		  		  b = * (addr++);
+		  		  g = * (addr++);
+		  		  r = * (addr++);
+		  		  Xil_Out32((VDMA_BUFFER_0 + (((y - 1) * size_x)+x) *4),((r<<16)|(g << 8)|(b<<0)));
+		  	  }
+	  }
+	  Xil_DCacheFlush();
+  }
+
+  void vdma_init()
+  {
+	  int i;
+	  for (i = 0; i <VIDEO_LENTH ; i++)
+	  {
+		  Xil_Out32( VDMA_BUFFER_0 + i*4 , 0);
+	  }
+	Xil_DCacheFlush();
+  	Xil_Out32(VDMA_BASEADDR,0x1);//开启vdma
+    Xil_Out32(VDMA_BASEADDR+0x5c,VDMA_BUFFER_0);//设置vdma映射内存起始地址
+  	Xil_Out32(VDMA_BASEADDR+0x58,STRIDE*3);//设置每行的
+	Xil_Out32(VDMA_BASEADDR+0x54,HSIZE*3);//设置每行的像素宽度=像素数x像素字节数
+  	Xil_Out32(VDMA_BASEADDR+0x50,VSIZE);//设置显示器高度像素数;
+
+  }
+
+  u8 RD_BUFFER[BUF_SIZE] __attribute__ ((aligned(32)));
+int main(void)
+{
+
+
+	vdma_init();
+	sd_mount();
+	BMP_Picture((u8 *)"ikun.bmp",RD_BUFFER,BUF_SIZE);
+	show_img(RD_BUFFER , 1280 , 720);
+	return 0;
+}

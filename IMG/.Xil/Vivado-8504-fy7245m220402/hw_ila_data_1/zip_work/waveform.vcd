@@ -1,0 +1,31 @@
+$date
+        2024-Apr-22 15:54:49
+$end
+$version
+        Vivado v2018.3 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 24 " zynq_i/v_axi4s_vid_out_0_vid_data [23:0] $end
+$var reg 1 : zynq_i/v_axi4s_vid_out_0_vid_hsync $end
+$var reg 1 ; zynq_i/v_axi4s_vid_out_0_vid_vsync $end
+$var reg 1 < zynq_i/v_axi4s_vid_out_0_vid_active_video $end
+$var reg 1 = _TRIGGER $end
+$var reg 1 > _WINDOW $end
+$var reg 1 ? _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+0:
+0;
+0<
+0=
+1>
+0?
+$end
+#512
+1=

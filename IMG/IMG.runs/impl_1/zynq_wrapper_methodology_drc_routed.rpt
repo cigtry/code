@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Apr 25 14:39:19 2024
+| Host         : fy7245m220402 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file zynq_wrapper_methodology_drc_routed.rpt -pb zynq_wrapper_methodology_drc_routed.pb -rpx zynq_wrapper_methodology_drc_routed.rpx
+| Design       : zynq_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 10
++-----------+----------+----------------------------------------------------+------------+
+| Rule      | Severity | Description                                        | Violations |
++-----------+----------+----------------------------------------------------+------------+
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-16 | Warning  | Large setup violation                              | 8          |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin          | 1          |
++-----------+----------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock zynq_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.021 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_clk/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_clk_p_0 (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -2.022 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_clk/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_clk_n_0 (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -2.057 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_blue/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_p_0[0] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -2.058 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_blue/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_n_0[0] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -2.058 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_green/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_p_0[1] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -2.059 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_green/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_n_0[1] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -2.062 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_red/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_p_0[2] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -2.063 ns between zynq_i/vga2hdmi_0/inst/inst_serializer_red/OSERDESE2_Master/CLK (clocked by clk_5x_zynq_clk_wiz_0_1) and tmds_data_n_0[2] (clocked by VIRTUAL_clk_5x_zynq_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock zynq_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin zynq_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+

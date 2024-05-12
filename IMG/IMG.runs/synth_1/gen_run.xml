@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1714026980">
+  <File Type="PA-TCL" Name="zynq_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="zynq_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="zynq_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="zynq_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="zynq_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="zynq_wrapper.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi/encode.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi/encode.v"/>
+        <Attr Name="ImportTime" Val="1703058084"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi/serializer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi/serializer.v"/>
+        <Attr Name="ImportTime" Val="1703058070"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi/vga2hdmi.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../hdmi/vga2hdmi.v"/>
+        <Attr Name="ImportTime" Val="1713753899"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/zynq/zynq.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/zynq/hdl/zynq_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="zynq_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/img.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/img.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_vga2hdmi_0_1"/>
+</GenRun>

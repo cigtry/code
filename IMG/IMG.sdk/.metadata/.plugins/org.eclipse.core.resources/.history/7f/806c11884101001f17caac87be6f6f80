@@ -1,0 +1,168 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "xil_io.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "ff.h"
+#include "xdevcfg.h"
+#include "sleep.h"
+#include "sd_card.h"
+
+
+#define VDMA_BASEADDR XPAR_AXI_VDMA_0_BASEADDR
+#define VDMA_BUFFER_0 0x08000000
+#define STRIDE 1280
+#define HSIZE  1280
+#define VSIZE  720
+#define VIDEO_LENTH ( HSIZE*VSIZE)
+#define BUF_SIZE VIDEO_LENTH*3
+
+#define FILE_NAME "ikun.bmp"                //定义文件名
+static FATFS fatfs;                         //文件系统
+
+
+  void vdma_init()
+  {
+	  int i;
+	  for (i = 0; i <VIDEO_LENTH ; i++)
+	  {
+		  Xil_Out32( VDMA_BUFFER_0 + i*4 , 0);
+	  }
+	Xil_DCacheFlush();
+  	Xil_Out32(VDMA_BASEADDR,0x1);//开启vdma
+    Xil_Out32(VDMA_BASEADDR+0x5c,VDMA_BUFFER_0);//设置vdma映射内存起始地址
+  	Xil_Out32(VDMA_BASEADDR+0x58,STRIDE*3);//设置每行的
+	Xil_Out32(VDMA_BASEADDR+0x54,HSIZE*3);//设置每行的像素宽度=像素数x像素字节数
+  	Xil_Out32(VDMA_BASEADDR+0x50,VSIZE);//设置显示器高度像素数;
+  	xil_printf("vdma初始化完成\r\n");
+  }
+
+  //初始化SD卡
+  u32 Init()
+  {
+      FRESULT result;
+      TCHAR *Path = "0:/";
+      result =f_mount(&fatfs,Path, 0);
+          if(result){
+                 printf("error : f_mount returned error \r\n");
+
+                 return XST_FAILURE;
+                    }
+
+      return XST_SUCCESS ;
+  }
+
+  //SD卡写函数
+  u32 Write(char *FileName,u32 src_addr,u32 byte_len,u32 start_addr)
+  {
+      FIL file;       //文件对象
+      FRESULT result;
+      UINT BytesWr;   //f_write函数返回已写入的字节数
+
+      result = f_open(&file,FileName,FA_CREATE_ALWAYS | FA_WRITE);//打开一个文件,如果不存在，则创建一个文件
+      if(result)
+      {
+          printf("error : f_open returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_lseek(&file, start_addr);//移动打开的文件对象的文件读/写指针,相当于将鼠标放在文件的某个开始位置。
+      if(result)
+      {
+          printf("error : f_lseek returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_write(&file,(void*) src_addr,byte_len,&BytesWr);//写文件内容
+      if(result)
+      {
+          printf("error : f_write returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_close(&file);    //关闭一个文件
+      if(result){
+          printf("error : f_close returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      return XST_SUCCESS;
+  }
+
+  //SD卡读函数
+  u32 Read(char *FileName,u32 DestinationAddress,u32 ByteLength,u32 start_addr)
+  {
+      FIL file;    //文件对象
+      FRESULT result;
+      UINT BytesRd;    //f_read函数返回已读出的字节数
+
+      result = f_open(&file,FileName,FA_READ);    //打开一个只读的文件
+      if(result)
+      {
+          printf("error : f_open returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_lseek(&file,start_addr);    //相当于将鼠标放在文件的某个开始位置。
+      if(result)
+      {
+          printf("error : f_lseek returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_read(&file, (void*)DestinationAddress,ByteLength,&BytesRd);//读文件内容
+      if(result)
+      {
+          printf("error : f_read returned error \r\n");
+          return XST_FAILURE;
+      }
+
+      result = f_close(&file);//关闭一个文件
+      if(result)
+      {
+          printf("error : f_close returned error \r\n");
+          return XST_FAILURE;
+      }
+      return XST_SUCCESS;
+  }
+
+
+
+int main(void)
+{
+
+	int Status,i,j,j_1,j_2,k,k_1,line_cnt,line_last,signal_cnt;
+	    u8 bmp_head[54];
+	    UINT *bmp_width,*bmp_height,*bmp_size,*offbit;
+	vdma_init();
+
+
+	    Init();
+
+	    //读取bmp图像头文件
+	     Status=Read(FILE_NAME, bmp_head, 54, 0);
+	     if (Status==XST_FAILURE)
+	     {
+	         return XST_FAILURE;
+	     }
+	     //读取信息头，并显示图像高、宽、大小以及像素数据开始位等信息
+	     xil_printf("cat.bmp head: \r");
+	     for(i=0;i<54;i++)
+	         xil_printf(" %x",bmp_head[i]);
+
+	     bmp_width = (UINT *)(bmp_head + 0x12);
+	     bmp_height = (UINT *)(bmp_head + 0x16);
+	     bmp_size = (UINT *)(bmp_head + 0x22);
+	     offbit = (UINT *)(bmp_head + 0x0A);
+	     xil_printf("\n width = %d, height = %d, size = %d, offbit = %d bytes \r",
+	             *bmp_width,*bmp_height,*bmp_size,*offbit);
+
+	//每次一行，将图像中除了信息头以及颜料表之外的像素数据存入DDR
+	     for(i=0;i<=*bmp_height-1;i++){
+	         Read(FILE_NAME,DDR_buffer_addr+i*(*bmp_width),(*bmp_width),(*offbit)+i*(*bmp_width));
+	     }
+
+	return 0;
+}
