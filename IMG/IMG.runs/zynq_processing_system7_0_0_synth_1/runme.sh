@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/software/vivado2018.3/SDK/2018.3/bin;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/software/vivado2018.3/Vivado/2018.3/bin
+  PATH=D:/vitis/SDK/2018.3/bin;D:/vitis/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/vitis/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/vitis/Vivado/2018.3/bin
 else
-  PATH=D:/software/vivado2018.3/SDK/2018.3/bin;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/software/vivado2018.3/Vivado/2018.3/bin:$PATH
+  PATH=D:/vitis/SDK/2018.3/bin;D:/vitis/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/vitis/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/vitis/Vivado/2018.3/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/zynq_processing_system7_0_0_synth_1'
+HD_PWD='D:/DESKTOP/code/IMG/IMG.runs/zynq_processing_system7_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

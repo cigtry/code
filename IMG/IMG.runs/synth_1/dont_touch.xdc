@@ -39,6 +39,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_clk_wiz_0_
 # IP: bd/zynq/ip/zynq_util_vector_logic_0_0/zynq_util_vector_logic_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_util_vector_logic_0_0 || ORIG_REF_NAME==zynq_util_vector_logic_0_0} -quiet] -quiet
 
+# IP: bd/zynq/ip/zynq_cmos_capture_0_0/zynq_cmos_capture_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_cmos_capture_0_0 || ORIG_REF_NAME==zynq_cmos_capture_0_0} -quiet] -quiet
+
+# IP: bd/zynq/ip/zynq_v_vid_in_axi4s_0_0/zynq_v_vid_in_axi4s_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_v_vid_in_axi4s_0_0 || ORIG_REF_NAME==zynq_v_vid_in_axi4s_0_0} -quiet] -quiet
+
 # IP: bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zynq_auto_pc_0 || ORIG_REF_NAME==zynq_auto_pc_0} -quiet] -quiet
 

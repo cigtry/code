@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat May 11 21:57:10 2024
+# Process ID: 16220
+# Current directory: D:/DESKTOP/DIP/IMG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5012 D:\DESKTOP\DIP\IMG\IMG.xpr
+# Log file: D:/DESKTOP/DIP/IMG/vivado.log
+# Journal file: D:/DESKTOP/DIP/IMG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/DESKTOP/DIP/IMG/IMG.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/DESKTOP/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd}

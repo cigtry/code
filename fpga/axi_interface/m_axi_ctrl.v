@@ -25,7 +25,7 @@ module m_axi_ctrl#(
 (
   input  wire                                      clk             ,
   input  wire                                      rst_n           ,
-  //??????
+  //user port
   input  wire                                      wr_start        ,
   input  wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   wr_addr         ,
   input  wire      [  07:00]                       wr_len          ,
@@ -38,7 +38,7 @@ module m_axi_ctrl#(
   input  wire      [  07:00]                       rd_len          ,
   output wire                                      rd_done         ,
   output wire                                      rd_vld          ,
-//AXI��??????
+//AXI write address channel
   output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_awid        ,
   output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_awaddr      ,
   output wire      [  07:00]                       axi_awlen       ,
@@ -51,20 +51,20 @@ module m_axi_ctrl#(
   output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_awuser      ,
   output wire                                      axi_awvalid     ,
   input  wire                                      axi_awready     ,
-//AXI��???????
+//AXI write data channel
   output wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_wdata       ,
   output wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_wstrb       ,
   output wire                                      axi_wlast       ,
   output wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_wuser       ,
   output wire                                      axi_wvalid      ,
   input  wire                                      axi_wready      ,
-//AXI??????
+//AXI respond channel
   input  wire      [C_M_AXI_ID_WIDTH     -1 : 00]  axi_bid         ,
   input  wire      [  01:00]                       axi_bresp       ,
   input  wire      [C_M_AXI_BUSER_WIDTH - 1 : 00]  axi_buser       ,
   input  wire                                      axi_bvalid      ,
   output wire                                      axi_bready      ,
-//AXI????????
+//AXI read address channel
   output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_arid        ,
   output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_araddr      ,
   output wire      [  07:00]                       axi_arlen       ,
@@ -77,7 +77,7 @@ module m_axi_ctrl#(
   output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_aruser      ,
   output wire                                      axi_arvalid     ,
   input  wire                                      axi_arready     ,
-//AXI?????????
+//AXI read data channel
   input  wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_rid         ,
   input  wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_rdata       ,
   input  wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_rresp       ,
@@ -150,7 +150,7 @@ inst_m_axi_wr(
   .wr_data                                           (wr_data        ),
   .wr_ready                                          (wr_ready       ),
   .wr_done                                           (wr_done        ),
-//AXI��??????
+//AXI锟斤拷??????
   .axi_awid                                          (axi_awid       ),
   .axi_awaddr                                        (axi_awaddr     ),
   .axi_awlen                                         (axi_awlen      ),
@@ -163,7 +163,7 @@ inst_m_axi_wr(
   .axi_awuser                                        (axi_awuser     ),
   .axi_awvalid                                       (axi_awvalid    ),
   .axi_awready                                       (axi_awready    ),
-//AXI��???????
+//AXI锟斤拷???????
   .axi_wdata                                         (axi_wdata      ),
   .axi_wstrb                                         (axi_wstrb      ),
   .axi_wlast                                         (axi_wlast      ),

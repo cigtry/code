@@ -1,0 +1,52 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do ../run.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:09:12 on Jun 01,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 22:09:12 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:09:12 on Jun 01,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module generate_3x3_winndows
+# -- Compiling module sync_fifo
+# -- Compiling module med_filter
+# 
+# Top level modules:
+# 	med_filter
+# End time: 22:09:12 on Jun 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 22:09:13 on Jun 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vsim-7) Failed to open readmem file "../../../../data/ikun_avg_fialter.dat" in read mode.
+# No such file or directory. (errno = ENOENT)    : ../testbench.sv(66)
+#    Time: 545 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+##############image result check end##############
+# ** Error (suppressible): (vsim-PLI-3085) $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308515 ns  Iteration: 1  Process: /testbench/#FORK#166_4f5f2f0b File: ../testbench.sv Line: 130
+# ** Error (suppressible): (vsim-PLI-3085) $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308515 ns  Iteration: 1  Process: /testbench/#FORK#166_4f5f2f0b File: ../testbench.sv Line: 135
+# End time: 22:09:32 on Jun 01,2024, Elapsed time: 0:00:19
+# Errors: 2, Warnings: 1

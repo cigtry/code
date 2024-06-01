@@ -24,10 +24,10 @@ module cmos_config(
   output  reg                    config_done
 );
 //Parameter Declarations
-    localparam  WAIT   = 3'b001,//上电等待20ms
+    localparam  WAIT   = 3'b001,//涓婄數绛夊緟20ms
                 IDLE   = 3'b010,
-                WRITE  = 3'b100;//等待�?个字节写�?
-    parameter   DELAY  = 1000_000;//上电延时20ms�?始配�?
+                WRITE  = 3'b100;//绛夊緟涓?涓瓧鑺傚啓瀹?
+    parameter   DELAY  = 1000_000;//涓婄數寤舵椂20ms寮?濮嬮厤缃?
 
 
 //Internal wire/reg declarations
@@ -178,7 +178,7 @@ module cmos_config(
 		 34 :lut_data	= 	{24'h3636_03};
 		 35 :lut_data	= 	{24'h3634_40};
 		 36 :lut_data	= 	{24'h3622_01};
-		// 50/60Hz detection 50/60Hz 灯光条纹过滤
+		// 50/60Hz detection 50/60Hz 鐏厜鏉＄汗杩囨护
 		 37 :lut_data	= 	{24'h3c01_34}; // Band auto, bit[7]
 		 38 :lut_data	= 	{24'h3c04_28}; // threshold low sum
 		 39 :lut_data	= 	{24'h3c05_98}; // threshold high sum
@@ -202,14 +202,14 @@ module cmos_config(
 		 57 :lut_data	= 	{24'h501f_01}; // ISP RGB
 		 58 :lut_data	= 	{24'h440e_00};
 		 59 :lut_data	= 	{24'h5000_a7}; // Lenc on, raw gamma on, BPC on, WPC on, CIP on
-		// AEC target 自动曝光控制
+		// AEC target 鑷姩鏇濆厜鎺у埗
 		 60 :lut_data	= 	{24'h3a0f_30}; // stable range in high
 		 61 :lut_data	= 	{24'h3a10_28}; // stable range in low
 		 62 :lut_data	= 	{24'h3a1b_30}; // stable range out high
 		 63 :lut_data	= 	{24'h3a1e_26}; // stable range out low
 		 64 :lut_data	= 	{24'h3a11_60}; // fast zone high
 		 65 :lut_data	= 	{24'h3a1f_14}; // fast zone low
-		// Lens correction for ? 镜头补偿
+		// Lens correction for ? 闀滃ご琛ュ伩
 		 66 :lut_data	= 	{24'h5800_23};
 		 67 :lut_data	= 	{24'h5801_14};
 		 68 :lut_data	= 	{24'h5802_0f};
@@ -272,7 +272,7 @@ module cmos_config(
 		 125:lut_data	= 	{24'h583b_28};
 		 126:lut_data	= 	{24'h583c_42};
 		 127:lut_data	= 	{24'h583d_ce}; // lenc BR offset
-		// AWB 自动白平�?
+		// AWB 鑷姩鐧藉钩琛?
 		 128:lut_data	= 	{24'h5180_ff}; // AWB B block
 		 129:lut_data	= 	{24'h5181_f2}; // AWB control
 		 130:lut_data	= 	{24'h5182_00}; // [7:4] max local counter, [3:0] max fast counter
@@ -304,7 +304,7 @@ module cmos_config(
 		 156:lut_data	= 	{24'h519c_06};
 		 157:lut_data	= 	{24'h519d_82};
 		 158:lut_data	= 	{24'h519e_38}; // AWB control
-		// Gamma 伽玛曲线
+		// Gamma 浼界帥鏇茬嚎
 		 159:lut_data	= 	{24'h5480_01}; //Gamma bias plus on, bit[0]
 		 160:lut_data	= 	{24'h5481_08};
 		 161:lut_data	= 	{24'h5482_14};
@@ -322,7 +322,7 @@ module cmos_config(
 		 173:lut_data	= 	{24'h548e_dd};
 		 174:lut_data	= 	{24'h548f_ea};
 		 175:lut_data	= 	{24'h5490_1d};
-		// color matrix 色彩矩阵
+		// color matrix 鑹插僵鐭╅樀
 		 176:lut_data	= 	{24'h5381_1e}; // CMX1 for Y
 		 177:lut_data	= 	{24'h5382_5b}; // CMX2 for Y
 		 178:lut_data	= 	{24'h5383_08}; // CMX3 for Y
@@ -334,7 +334,7 @@ module cmos_config(
 		 184:lut_data	= 	{24'h5389_10}; // CMX9 for V
 		 185:lut_data	= 	{24'h538a_01}; // sign[9]
 		 186:lut_data	= 	{24'h538b_98}; // sign[8:1]
-		// UV adjust UV 色彩饱和度调�?
+		// UV adjust UV 鑹插僵楗卞拰搴﹁皟鏁?
 		 187:lut_data	= 	{24'h5580_06}; // saturation on, bit[1]
 		 188:lut_data	= 	{24'h5583_40};
 		 189:lut_data	= 	{24'h5584_10};
@@ -342,7 +342,7 @@ module cmos_config(
 		 191:lut_data	= 	{24'h558a_00};
 		 192:lut_data	= 	{24'h558b_f8};
 		 193:lut_data	= 	{24'h501d_40}; // enable manual offset of contrast
-		// CIP 锐化和降�?
+		// CIP 閿愬寲鍜岄檷鍣?
 		 194:lut_data	= 	{24'h5300_08}; //CIP sharpen MT threshold 1
 		 195:lut_data	= 	{24'h5301_30}; //CIP sharpen MT threshold 2
 		 196:lut_data	= 	{24'h5302_10}; // CIP sharpen MT offset 1

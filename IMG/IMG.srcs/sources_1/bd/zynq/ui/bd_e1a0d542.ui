@@ -1,53 +1,72 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 290 -defaultsOSRD
-preplace port tmds_clk_n_0 -pg 1 -y 540 -defaultsOSRD
-preplace port tmds_clk_p_0 -pg 1 -y 520 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 310 -defaultsOSRD
-preplace portBus tmds_data_p_0 -pg 1 -y 560 -defaultsOSRD
-preplace portBus tmds_data_n_0 -pg 1 -y 580 -defaultsOSRD
-preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 4 -y 590 -defaultsOSRD
-preplace inst v_tc_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
-preplace inst axi_vdma_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -y 300 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 670 -defaultsOSRD
-preplace inst vga2hdmi_0 -pg 1 -lvl 5 -y 550 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 360 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 600 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 610 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -y 330 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 5 1 NJ
-preplace netloc v_axi4s_vid_out_0_vid_data 1 4 1 1470
-preplace netloc clk_wiz_0_locked 1 2 3 720 610 1130 410 1500
-preplace netloc v_axi4s_vid_out_0_vid_hsync 1 4 1 N
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 380 220 NJ 220 NJ 220 NJ 220 1990
-preplace netloc axi_vdma_0_M_AXI_MM2S 1 3 1 1160
-preplace netloc vga2hdmi_0_tmds_clk_n 1 5 1 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 380 500 690 320 NJ
-preplace netloc clk_wiz_0_clk_1x 1 2 3 710 590 1100 430 1480
-preplace netloc axi_smc_M00_AXI 1 4 1 1510
-preplace netloc axi_vdma_0_M_AXIS_MM2S 1 3 1 1150
-preplace netloc util_vector_logic_0_Res 1 3 1 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30 510 NJ 510 700J 380 NJ 380 1460J 230 1980
-preplace netloc vga2hdmi_0_tmds_clk_p 1 5 1 NJ
-preplace netloc v_axi4s_vid_out_0_vid_active_video 1 4 1 1480
-preplace netloc clk_wiz_0_clk_5x 1 2 3 N 600 1140J 420 1490J
-preplace netloc v_axi4s_vid_out_0_vtg_ce 1 2 3 730 580 1090J 400 1460
-preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ
-preplace netloc vga2hdmi_0_tmds_data_n 1 5 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 500 370 210 720 230 1120 390 1510 430 1970
-preplace netloc v_tc_0_vtiming_out 1 3 1 1110
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 680
-preplace netloc v_axi4s_vid_out_0_vid_vsync 1 4 1 N
-preplace netloc vga2hdmi_0_tmds_data_p 1 5 1 NJ
-levelinfo -pg 1 0 200 530 910 1310 1740 2010 -top 0 -bot 750
+preplace port cmos_pclk_0 -pg 1 -y 630 -defaultsOSRD
+preplace port cmos_vsync_0 -pg 1 -y 650 -defaultsOSRD
+preplace port DDR -pg 1 -y 80 -defaultsOSRD
+preplace port GPIO_0_0 -pg 1 -y 60 -defaultsOSRD
+preplace port tmds_clk_n_0 -pg 1 -y 600 -defaultsOSRD
+preplace port tmds_clk_p_0 -pg 1 -y 580 -defaultsOSRD
+preplace port cmos_herf_0 -pg 1 -y 670 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 100 -defaultsOSRD
+preplace portBus cmos_data_0 -pg 1 -y 690 -defaultsOSRD
+preplace portBus tmds_data_p_0 -pg 1 -y 620 -defaultsOSRD
+preplace portBus tmds_data_n_0 -pg 1 -y 640 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 6 -y 710 -defaultsOSRD
+preplace inst cmos_capture_0 -pg 1 -lvl 3 -y 650 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 5 -y 660 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 5 -y 390 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 6 -y 140 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 820 -defaultsOSRD
+preplace inst vga2hdmi_0 -pg 1 -lvl 7 -y 610 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 4 -y 730 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -y 370 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 560 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 530 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -y 110 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 7 1 NJ
+preplace netloc v_axi4s_vid_out_0_vid_data 1 6 1 2080
+preplace netloc v_vid_in_axi4s_0_video_out 1 4 1 1350
+preplace netloc cmos_pclk_0_1 1 0 4 20J 650 NJ 650 600 550 1020
+preplace netloc clk_wiz_0_locked 1 2 5 610 540 980 540 1360 540 1710 540 2070
+preplace netloc v_axi4s_vid_out_0_vid_hsync 1 6 1 2070
+preplace netloc axi_vdma_0_M_AXI_MM2S 1 5 1 1710
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 5 1040 50 NJ 50 NJ 50 2070J 220 2580
+preplace netloc cmos_capture_0_cmos_frame_herf 1 3 1 990
+preplace netloc vga2hdmi_0_tmds_clk_n 1 7 1 NJ
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 370 480 590 450 980 220 1370 170 N
+preplace netloc clk_wiz_0_clk_1x 1 2 5 580J 530 NJ 530 1340 570 1740 520 2100
+preplace netloc axi_vdma_0_M_AXIS_MM2S 1 5 1 1720
+preplace netloc axi_smc_M00_AXI 1 6 1 2060
+preplace netloc cmos_capture_0_cmos_frame_data 1 3 1 1010
+preplace netloc util_vector_logic_0_Res 1 3 3 960 900 1360J 790 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 30 NJ 30 NJ 30 NJ 30 NJ 30 NJ 30 2100J 240 2560
+preplace netloc vga2hdmi_0_tmds_clk_p 1 7 1 NJ
+preplace netloc v_axi4s_vid_out_0_vid_active_video 1 6 1 2090
+preplace netloc clk_wiz_0_clk_5x 1 2 5 570J 520 NJ 520 NJ 520 1710J 530 2090
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 4 3 1370 550 NJ 550 2060
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ
+preplace netloc cmos_capture_0_cmos_frame_vsync 1 3 1 1000
+preplace netloc cmos_capture_0_cmos_frame_valid 1 3 1 960
+preplace netloc processing_system7_0_GPIO_0 1 7 1 NJ
+preplace netloc cmos_data_0_1 1 0 3 NJ 690 NJ 690 NJ
+preplace netloc vga2hdmi_0_tmds_data_n 1 7 1 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 630 380 640 560J 510 1030 230 1360 230 1730 40 2090 230 2570
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 5 1 1720
+preplace netloc ps7_0_axi_periph_M00_AXI 1 4 1 1340
+preplace netloc v_tc_0_vtiming_out 1 5 1 N
+preplace netloc cmos_vsync_0_1 1 0 3 10J 660 NJ 660 620J
+preplace netloc v_axi4s_vid_out_0_vid_vsync 1 6 1 2100
+preplace netloc cmos_capture_0_cmos_pclk_ce 1 3 1 970
+preplace netloc cmos_herf_0_1 1 0 3 NJ 670 NJ 670 NJ
+preplace netloc vga2hdmi_0_tmds_data_p 1 7 1 NJ
+levelinfo -pg 1 -10 200 470 790 1190 1540 1910 2330 2600 -top 0 -bot 910
 "
 }
 {
-   "da_axi4_cnt":"3",
+   "da_axi4_cnt":"4",
    "da_board_cnt":"1",
-   "da_clkrst_cnt":"1",
+   "da_clkrst_cnt":"2",
    "da_ps7_cnt":"1"
 }

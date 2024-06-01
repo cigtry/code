@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=D:/software/vivado2018.3/SDK/2018.3/bin;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/software/vivado2018.3/Vivado/2018.3/bin
+  PATH=D:/vitis/SDK/2018.3/bin;D:/vitis/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/vitis/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/vitis/Vivado/2018.3/bin
 else
-  PATH=D:/software/vivado2018.3/SDK/2018.3/bin;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/software/vivado2018.3/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/software/vivado2018.3/Vivado/2018.3/bin:$PATH
+  PATH=D:/vitis/SDK/2018.3/bin;D:/vitis/Vivado/2018.3/ids_lite/ISE/bin/nt64;D:/vitis/Vivado/2018.3/ids_lite/ISE/lib/nt64:D:/vitis/Vivado/2018.3/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maccura/Desktop/DIP/IMG/IMG.runs/impl_1'
+HD_PWD='D:/DESKTOP/code/IMG/IMG.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log zynq_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source zynq_wrapper.tcl -notrace
 
 

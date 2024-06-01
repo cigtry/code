@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maccura/Desktop/code-main/fpga/bilateral_filter/sim/sim_log
+vbilateral_filter
+!s110 1717135782
+!i10b 1
+!s100 DPBjTVYoKd^RQ4EdCIK9f2
+Ig_kVcBALZ?ZHGN@:_dP8i1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1717135760
+8../../src/bilateral_filter.v
+F../../src/bilateral_filter.v
+Z2 L0 26
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1717135782.000000
+!s107 ../../src/bilateral_filter.v|../../src/Similary_LUT.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+Z4 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 1
+Z5 !s102 +cover
+Z6 o+cover -work xil_defaultlib
+Z7 tCvgOpt 0
+vgenerate_3x3_winndows
+!s10a 1716888158
+Z8 !s110 1717134561
+!i10b 1
+!s100 :kOg`nX2MflTh8H=Hi38K0
+IihHW?DRD9ZWOHgBTdfY`m0
+R1
+R0
+w1716888158
+8../../src/generate_3x3_winndows.v
+F../../src/generate_3x3_winndows.v
+R2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1717134561.000000
+!s107 ../../src/bilateral_filter.v|../../src/Similary_LUT.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+R4
+!i113 1
+R5
+R6
+R7
+vSimilary_LUT
+!s10a 1679973960
+R8
+!i10b 1
+!s100 :gJ1N1:mYG8O0EgU8N7MM1
+I`T2KaKY=?PiGj`IaG71TN3
+R1
+R0
+w1679973960
+8../../src/Similary_LUT.v
+F../../src/Similary_LUT.v
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 ../../src/bilateral_filter.v|../../src/Similary_LUT.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+R4
+!i113 1
+R5
+R6
+R7
+n@similary_@l@u@t
+vsync_fifo
+!s10a 1716881010
+R8
+!i10b 1
+!s100 50aDIh4e872boi`280a7C1
+IYRH3iek0lH^@c[0[EdAZe1
+R1
+R0
+w1716881010
+8../../src/sync_fifo.v
+F../../src/sync_fifo.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 ../../src/bilateral_filter.v|../../src/Similary_LUT.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+R4
+!i113 1
+R5
+R6
+R7
+vtestbench
+!s10a 1717134546
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R8
+!i10b 1
+!s100 hS?>fHY8QFn;EioMGX;VY2
+I=D1njLZlgRoD3VBZGQ:N92
+R1
+!s105 testbench_sv_unit
+S1
+R0
+w1717134546
+8../testbench.sv
+F../testbench.sv
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 ../testbench.sv|
+!s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 1
+o-sv -work xil_defaultlib
+R7

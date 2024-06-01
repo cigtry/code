@@ -5,14 +5,31 @@ verilog xil_defaultlib --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshare
 "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_0/sim/bd_7cab_one_0.v" \
 
 sv xil_defaultlib --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/ec67/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/70cf/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/58e2/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/979d/hdl/verilog" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/b2d0/hdl/verilog" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/85a3" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_2/sim/bd_7cab_s00mmu_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_3/sim/bd_7cab_s00tr_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_4/sim/bd_7cab_s00sic_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/sim/bd_7cab_s00a2s_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/sim/bd_7cab_sarn_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_7/sim/bd_7cab_srn_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_8/sim/bd_7cab_m00s2a_0.sv" \
-"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_9/sim/bd_7cab_m00e_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_2/sim/bd_7cab_arsw_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_3/sim/bd_7cab_rsw_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_4/sim/bd_7cab_awsw_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/sim/bd_7cab_wsw_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/sim/bd_7cab_bsw_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_7/sim/bd_7cab_s00mmu_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_8/sim/bd_7cab_s00tr_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_9/sim/bd_7cab_s00sic_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_10/sim/bd_7cab_s00a2s_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_11/sim/bd_7cab_sarn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_12/sim/bd_7cab_srn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_13/sim/bd_7cab_s01mmu_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_14/sim/bd_7cab_s01tr_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_15/sim/bd_7cab_s01sic_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_16/sim/bd_7cab_s01a2s_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_17/sim/bd_7cab_sawn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_18/sim/bd_7cab_swn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_19/sim/bd_7cab_sbn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_20/sim/bd_7cab_m00s2a_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_21/sim/bd_7cab_m00arn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_22/sim/bd_7cab_m00rn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_23/sim/bd_7cab_m00awn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_24/sim/bd_7cab_m00wn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_25/sim/bd_7cab_m00bn_0.sv" \
+"../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_26/sim/bd_7cab_m00e_0.sv" \
 
 verilog xil_defaultlib --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/ec67/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/70cf/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/58e2/hdl" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/979d/hdl/verilog" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/b2d0/hdl/verilog" --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/85a3" \
 "../../../bd/zynq/ip/zynq_axi_smc_0/sim/zynq_axi_smc_0.v" \
@@ -22,6 +39,8 @@ verilog xil_defaultlib --include "../../../../IMG.srcs/sources_1/bd/zynq/ipshare
 "../../../bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_clk_wiz.v" \
 "../../../bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.v" \
 "../../../bd/zynq/ip/zynq_util_vector_logic_0_0/sim/zynq_util_vector_logic_0_0.v" \
+"../../../bd/zynq/ip/zynq_cmos_capture_0_0/sim/zynq_cmos_capture_0_0.v" \
+"../../../bd/zynq/ip/zynq_v_vid_in_axi4s_0_0/sim/zynq_v_vid_in_axi4s_0_0.v" \
 "../../../bd/zynq/ip/zynq_auto_pc_0/sim/zynq_auto_pc_0.v" \
 
 verilog xil_defaultlib "glbl.v"

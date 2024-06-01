@@ -1,0 +1,2024 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ../run.do
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:31:03 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:31:03 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:31:03 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module generate_3x3_winndows
+# -- Compiling module sync_fifo
+# -- Compiling module sqrt
+# -- Compiling module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:31:03 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:31:03 on May 31,2024
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8415755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8432255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8448755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8465255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8481755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8498255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8514755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8531255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8547755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8564255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8580755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8597255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8613755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8630255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8646755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8663255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8679755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8696255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8712755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8729255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8745755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8762255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8778755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8795255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8811755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8828255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8844755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8861255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8877755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8894255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8910755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8927255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8943755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8960255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8976755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 8993255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9009755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9026255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9042755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9059255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9075755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9092255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9108755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9125255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9141755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9158255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9174755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9191255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9207755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9224255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9240755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9257255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9273755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9290255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9306755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9323255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9339755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9356255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9372755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9389255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9405755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9422255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9438755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9455255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9471755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9488255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9504755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9521255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9537755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9554255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9570755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9587255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9603755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9620255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9636755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9653255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9669755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9686255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9702755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9719255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9735755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9752255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9768755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9785255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9801755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9818255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9834755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9851255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9867755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9884255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9900755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9917255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9933755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9950255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9966755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9983255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 9999755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10016255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10032755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10049255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10065755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10082255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10098755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10115255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10131755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10148255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10164755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10181255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10197755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10214255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10230755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10247255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10263755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10280255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10296755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10313255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10329755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10346255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10362755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10379255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10395755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10412255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10428755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10445255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10461755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10478255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10494755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10511255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10527755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10544255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10560755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10577255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10593755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10610255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10626755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10643255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10659755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10676255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10692755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10709255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10725755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10742255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10758755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10775255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10791755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10808255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10824755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10841255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10857755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10874255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10890755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10907255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10923755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10940255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10956755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10973255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 10989755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11006255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11022755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11039255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11055755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11072255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11088755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11105255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11121755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11138255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11154755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11171255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11187755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11204255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11220755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11237255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11253755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11270255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11286755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11303255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11319755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11336255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11352755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11369255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11385755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11402255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11418755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11435255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11451755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11468255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11484755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11501255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11517755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11534255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11550755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11567255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11583755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11600255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11616755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11633255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11649755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11666255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11682755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11699255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11715755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11732255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11748755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11765255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11781755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11798255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11814755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11831255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11847755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11864255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11880755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11897255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11913755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11930255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11946755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11963255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11979755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 11996255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12012755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12029255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12045755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12062255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12078755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12095255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12111755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12128255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12144755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12161255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12177755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12194255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12210755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12227255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12243755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12260255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12276755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12293255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12309755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12326255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12342755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12359255 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+# ** Warning: (vsim-3533) [FOFIW] - Failed to open file "../../../../data/soble_detec.dat" for writing.
+# Too many open files. (errno = EMFILE)    : ../testbench.sv(133)
+#    Time: 12375755 ns  Iteration: 1  Instance: /testbench
+# ======image_result_check begin=========
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:34:39 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:34:39 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:34:39 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module generate_3x3_winndows
+# -- Skipping module sync_fifo
+# -- Skipping module sqrt
+# -- Compiling module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:34:39 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:34:41 on May 31,2024, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 241
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:34:41 on May 31,2024
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:36:08 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:36:08 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:36:09 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module generate_3x3_winndows
+# -- Skipping module sync_fifo
+# -- Skipping module sqrt
+# -- Skipping module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:36:09 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:36:10 on May 31,2024, Elapsed time: 0:01:29
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:36:10 on May 31,2024
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+# ======image_result_check begin=========
+add wave -position insertpoint sim:/testbench/u_sobel_detec/*
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:37:14 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:37:14 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:37:14 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module generate_3x3_winndows
+# -- Skipping module sync_fifo
+# -- Skipping module sqrt
+# -- Compiling module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:37:14 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:37:15 on May 31,2024, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:37:15 on May 31,2024
+# ======image_result_check begin=========
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:37:30 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:37:30 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:37:31 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module generate_3x3_winndows
+# -- Skipping module sync_fifo
+# -- Skipping module sqrt
+# -- Compiling module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:37:31 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:37:32 on May 31,2024, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:37:32 on May 31,2024
+# ======image_result_check begin=========
+##############image result check end##############
+# ** Error (suppressible): (vsim-PLI-3085) ../testbench.sv(138): $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308645 ns  Iteration: 1  Instance: /testbench
+# ** Error (suppressible): (vsim-PLI-3085) ../testbench.sv(143): $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308645 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:40:45 on May 31,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 17:40:45 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:40:45 on May 31,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module generate_3x3_winndows
+# -- Skipping module sync_fifo
+# -- Skipping module sqrt
+# -- Skipping module sobel_detec
+# 
+# Top level modules:
+# 	sobel_detec
+# End time: 17:40:45 on May 31,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:40:47 on May 31,2024, Elapsed time: 0:03:15
+# Errors: 2, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 17:40:47 on May 31,2024
+# ======image_result_check begin=========
+##############image result check end##############
+# ** Error (suppressible): (vsim-PLI-3085) ../testbench.sv(138): $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308645 ns  Iteration: 1  Instance: /testbench
+# ** Error (suppressible): (vsim-PLI-3085) ../testbench.sv(143): $fwrite : Argument 1 is an unknown file descriptor.
+#    Time: 12308645 ns  Iteration: 1  Instance: /testbench
+# End time: 17:46:16 on May 31,2024, Elapsed time: 0:05:29
+# Errors: 2, Warnings: 0

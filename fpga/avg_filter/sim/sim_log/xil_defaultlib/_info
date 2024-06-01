@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maccura/Desktop/code-main/fpga/avg_filter/sim/sim_log
+vavg_fliter
+Z1 !s110 1716973427
+!i10b 1
+!s100 OlANWDcAh0ka=U<ENXgTc2
+I_c2`Vb>;@3o1Tba6<YKCL2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1716888250
+8../../src/avg_fliter.v
+F../../src/avg_fliter.v
+Z3 L0 26
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1716973427.000000
+Z6 !s107 ../../src/avg_fliter.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+Z7 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 1
+Z8 !s102 +cover
+Z9 o+cover -work xil_defaultlib
+Z10 tCvgOpt 0
+vgenerate_3x3_winndows
+R1
+!i10b 1
+!s100 :kOg`nX2MflTh8H=Hi38K0
+IihHW?DRD9ZWOHgBTdfY`m0
+R2
+R0
+w1716967414
+8../../src/generate_3x3_winndows.v
+F../../src/generate_3x3_winndows.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vsync_fifo
+R1
+!i10b 1
+!s100 50aDIh4e872boi`280a7C1
+IYRH3iek0lH^@c[0[EdAZe1
+R2
+R0
+w1716881010
+8../../src/sync_fifo.v
+F../../src/sync_fifo.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vtestbench
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 `R>H^fiSC[0Q^ze7<Gm6k1
+I895]c;iIVD6eb<JUQaCEW1
+R2
+!s105 testbench_sv_unit
+S1
+R0
+w1716962226
+8../testbench.sv
+F../testbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../testbench.sv|
+!s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 1
+o-sv -work xil_defaultlib
+R10

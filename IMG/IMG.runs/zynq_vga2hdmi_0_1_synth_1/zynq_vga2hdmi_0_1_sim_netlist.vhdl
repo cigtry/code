@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Apr 22 13:57:46 2024
--- Host        : fy7245m220402 running 64-bit major release  (build 9200)
+-- Date        : Sat May 25 23:15:39 2024
+-- Host        : cigtry running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ zynq_vga2hdmi_0_1_sim_netlist.vhdl
 -- Design      : zynq_vga2hdmi_0_1
@@ -5118,7 +5118,7 @@ inst_encode_blue: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_encode
       clk_1x => clk_1x,
       de_reg => de_reg,
       hsync => hsync,
-      rgb_data(7 downto 0) => rgb_data(15 downto 8),
+      rgb_data(7 downto 0) => rgb_data(7 downto 0),
       vsync => vsync
     );
 inst_encode_green: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_encode_0
@@ -5127,7 +5127,7 @@ inst_encode_green: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_encode_
       Q(9 downto 0) => green_out(9 downto 0),
       clk_1x => clk_1x,
       de_reg => de_reg,
-      rgb_data(7 downto 0) => rgb_data(7 downto 0)
+      rgb_data(7 downto 0) => rgb_data(15 downto 8)
     );
 inst_encode_red: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_encode_1
      port map (

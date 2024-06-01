@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Apr 22 13:57:46 2024
-// Host        : fy7245m220402 running 64-bit major release  (build 9200)
+// Date        : Sat May 25 23:15:39 2024
+// Host        : cigtry running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_vga2hdmi_0_1/zynq_vga2hdmi_0_1_sim_netlist.v
+//               D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_vga2hdmi_0_1/zynq_vga2hdmi_0_1_sim_netlist.v
 // Design      : zynq_vga2hdmi_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -4175,14 +4175,14 @@ module zynq_vga2hdmi_0_1_vga2hdmi
         .clk_1x(clk_1x),
         .de_reg(de_reg),
         .hsync(hsync),
-        .rgb_data(rgb_data[15:8]),
+        .rgb_data(rgb_data[7:0]),
         .vsync(vsync));
   zynq_vga2hdmi_0_1_encode_0 inst_encode_green
        (.AR(inst_encode_red_n_1),
         .Q(green_out),
         .clk_1x(clk_1x),
         .de_reg(de_reg),
-        .rgb_data(rgb_data[7:0]));
+        .rgb_data(rgb_data[15:8]));
   zynq_vga2hdmi_0_1_encode_1 inst_encode_red
        (.AR(inst_encode_red_n_1),
         .Q(red_out),

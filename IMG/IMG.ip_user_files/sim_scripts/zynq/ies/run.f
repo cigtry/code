@@ -1,21 +1,21 @@
 -makelib ies_lib/xilinx_vip -sv \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "D:/vitis/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "D:/vitis/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/vitis/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
+  "D:/vitis/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib ies_lib/xpm \
-  "D:/software/vivado2018.3/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
+  "D:/vitis/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -101,47 +101,69 @@
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/979d/hdl/sc_util_v1_0_vl_rfs.sv" \
+  "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/c012/hdl/sc_switchboard_v1_0_vl_rfs.sv" \
+-endlib
+-makelib ies_lib/xil_defaultlib -sv \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_2/sim/bd_7cab_arsw_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_3/sim/bd_7cab_rsw_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_4/sim/bd_7cab_awsw_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/sim/bd_7cab_wsw_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/sim/bd_7cab_bsw_0.sv" \
+-endlib
+-makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/f85e/hdl/sc_mmu_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_2/sim/bd_7cab_s00mmu_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_7/sim/bd_7cab_s00mmu_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/ca72/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_3/sim/bd_7cab_s00tr_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_8/sim/bd_7cab_s00tr_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/9ade/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_4/sim/bd_7cab_s00sic_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_9/sim/bd_7cab_s00sic_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/b89e/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/sim/bd_7cab_s00a2s_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_10/sim/bd_7cab_s00a2s_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/b2d0/hdl/sc_node_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/sim/bd_7cab_sarn_0.sv" \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_7/sim/bd_7cab_srn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_11/sim/bd_7cab_sarn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_12/sim/bd_7cab_srn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_13/sim/bd_7cab_s01mmu_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_14/sim/bd_7cab_s01tr_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_15/sim/bd_7cab_s01sic_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_16/sim/bd_7cab_s01a2s_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_17/sim/bd_7cab_sawn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_18/sim/bd_7cab_swn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_19/sim/bd_7cab_sbn_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/7005/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_8/sim/bd_7cab_m00s2a_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_20/sim/bd_7cab_m00s2a_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_21/sim/bd_7cab_m00arn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_22/sim/bd_7cab_m00rn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_23/sim/bd_7cab_m00awn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_24/sim/bd_7cab_m00wn_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_25/sim/bd_7cab_m00bn_0.sv" \
 -endlib
 -makelib ies_lib/smartconnect_v1_0 -sv \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/b387/hdl/sc_exit_v1_0_vl_rfs.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib -sv \
-  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_9/sim/bd_7cab_m00e_0.sv" \
+  "../../../bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_26/sim/bd_7cab_m00e_0.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/zynq/ip/zynq_axi_smc_0/sim/zynq_axi_smc_0.v" \
@@ -173,6 +195,8 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/zynq/ip/zynq_util_vector_logic_0_0/sim/zynq_util_vector_logic_0_0.v" \
+  "../../../bd/zynq/ip/zynq_cmos_capture_0_0/sim/zynq_cmos_capture_0_0.v" \
+  "../../../bd/zynq/ip/zynq_v_vid_in_axi4s_0_0/sim/zynq_v_vid_in_axi4s_0_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../IMG.srcs/sources_1/bd/zynq/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

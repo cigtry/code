@@ -46,7 +46,7 @@ module m_axi_wr#(
   output reg                                       axi_awvalid     ,
   input  wire                                      axi_awready     ,
 //AXI?????????
-  output reg       [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_wdata       ,
+  output wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_wdata       ,
   output wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_wstrb       ,
   output wire                                      axi_wlast       ,
   output wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_wuser       ,
@@ -93,18 +93,7 @@ module m_axi_wr#(
   assign                                             axi_b_handok   = axi_bvalid && axi_bready;
   assign                                             wr_ready = axi_w_handok;
   reg              [  07:00]                       wr_index        ;
-    ila_0 your_instance_name (
-	.clk(clk), // input wire clk
 
-
-	.probe0(wr_done), // input wire [0:0]  probe0  
-	.probe1(wr_addr), // input wire [31:0]  probe1 
-	.probe2(wr_data), // input wire [31:0]  probe2 
-	.probe3(axi_awaddr), // input wire [31:0]  probe3 
-	.probe4(wr_start), // input wire [0:0]  probe4 
-	.probe5(axi_wvalid), // input wire [0:0]  probe5
-	.probe6(state_c) // input wire [1:0]  probe6
-);
   always @(posedge clk ) begin
     if(!rst_n )begin
       state_c <= IDLE;
@@ -148,7 +137,7 @@ module m_axi_wr#(
     endcase
   end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_awaddr <= {C_M_AXI_ADDR_WIDTH{1'b0}};
     end
@@ -160,7 +149,7 @@ module m_axi_wr#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_awvalid <= 1'b0;
     end
@@ -175,7 +164,7 @@ module m_axi_wr#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_wvalid <= 1'b0;
     end
@@ -192,11 +181,11 @@ module m_axi_wr#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       wr_index <= 8'd0;
     end
-    else if(wr_start || wr_done )begin
+    else if(wr_start || (wr_index == wr_len - 1 ))begin
       wr_index <= 8'd0;
     end
     else if (state_c ==W_DATA && axi_wvalid ) begin
@@ -208,19 +197,11 @@ module m_axi_wr#(
   end                                                               //always end
   
   
-  always @ (posedge clk or negedge rst_n)begin
-    if(!rst_n)begin
-      axi_wdata <= {C_M_AXI_DATA_WIDTH{1'b0}};
-    end
-    else if(axi_wvalid)begin
-      axi_wdata <= wr_data;
-    end
-    else begin
-      axi_wdata <= axi_wdata;
-    end
-  end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  assign    axi_wdata = axi_w_handok ? wr_data : 32'h00;
+
+
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       wr_done <= 1'b0;
     end
@@ -234,7 +215,7 @@ module m_axi_wr#(
   
   assign                                             axi_wlast      = wr_done;
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_bready <= 1'b0;
     end

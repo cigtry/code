@@ -7,75 +7,73 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/maccura/Desktop/DIP/fpga/hist_EQ/sim_log
+Z0 dC:/Users/maccura/Desktop/code-main/fpga/hist_EQ/sim_log
 vhist_stat
-!s10a 1713404582
-!s110 1713404615
+Z1 !s110 1716771950
 !i10b 1
-!s100 EXXBLUoekRe@UC^[faI8U1
-Ib6[B2Fgo]4R?8cTC8]zzo2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 n9<?U2IOzPWlBmALKC69k2
+I250OmzDMM1DG]Xf_^f<AB1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1713404582
+Z3 w1715472582
 8../hist_stat.v
 F../hist_stat.v
-Z2 L0 16
-Z3 OV;L;10.5b;63
+Z4 L0 16
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1713404615.000000
-Z4 !s107 ../histEQ_proc.v|../hist_stat.v|
-Z5 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+Z6 !s108 1716771950.000000
+Z7 !s107 ../histEQ_proc.v|../hist_stat.v|
+Z8 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
 !i113 1
-Z6 !s102 +cover
-Z7 o+cover -work xil_defaultlib
-Z8 tCvgOpt 0
+Z9 !s102 +cover
+Z10 o+cover -work xil_defaultlib
+Z11 tCvgOpt 0
 vhistEQ_proc
-!s10a 1713345241
-!s110 1713402100
+R1
 !i10b 1
 !s100 F7ggEmNI@?oZ[MGonaP[11
 IU>c5bXZDUdeY8oV3ohEcl1
-R1
+R2
 R0
-w1713345241
+R3
 8../histEQ_proc.v
 F../histEQ_proc.v
-R2
-R3
+R4
+R5
 r1
 !s85 0
 31
-!s108 1713402100.000000
-R4
-R5
-!i113 1
 R6
 R7
 R8
+!i113 1
+R9
+R10
+R11
 nhist@e@q_proc
 vtestbench
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1713404705
+R1
 !i10b 1
 !s100 ;AanzTN:f;Z@PifE<41L30
 I`Cla>=45lg2oU=To=MYkj2
-R1
+R2
 !s105 testbench_sv_unit
 S1
 R0
-w1713404698
+R3
 8../testbench.sv
 F../testbench.sv
 L0 7
-R3
+R5
 r1
 !s85 0
 31
-!s108 1713404705.000000
+R6
 !s107 ../testbench.sv|
 !s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
 !i113 1
 o-sv -work xil_defaultlib
-R8
+R11

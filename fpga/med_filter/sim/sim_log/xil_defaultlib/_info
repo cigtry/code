@@ -1,0 +1,117 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/DESKTOP/code/fpga/med_filter/sim/sim_log
+T_opt
+!s110 1717250954
+V?=W@dKTZ]M1Y5UafBTznM0
+04 9 4 work testbench fast 0
+=1-b0dcefa458fd-665b2b89-2f7-3ac8
+o-quiet -auto_acc_if_foreign -work xil_defaultlib -L xil_defaultlib +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vgenerate_3x3_winndows
+Z2 !s110 1717250952
+!i10b 1
+!s100 65f5mGbdlVE<6TQB[;UUP1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iiakee9^GGFG@bLZ@hUXP42
+R0
+w1716888158
+8../../src/generate_3x3_winndows.v
+F../../src/generate_3x3_winndows.v
+!i122 1
+L0 26 270
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1717250952.000000
+Z7 !s107 ../../src/med_filter.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+Z8 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 0
+Z9 !s102 +cover
+Z10 o+cover -work xil_defaultlib
+R1
+vmed_filter
+R2
+!i10b 1
+!s100 <onY^T=gd:Cd^SmJE3z_G0
+R3
+I_mL8AUPg1J]ezQF1>0H;j2
+R0
+w1716889327
+8../../src/med_filter.v
+F../../src/med_filter.v
+!i122 1
+L0 26 217
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vsync_fifo
+R2
+!i10b 1
+!s100 ;T@ITmEH:MNgU]UX3d2`O2
+R3
+I=64V@ifnZW89Mmf3?mLmK2
+R0
+w1716881010
+8../../src/sync_fifo.v
+F../../src/sync_fifo.v
+!i122 1
+L0 1 143
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vtestbench
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 A^>oBU1H=I[nijfRK3@H?1
+R3
+I8Ti]X24dKz2IAiU_=:DHC1
+S1
+R0
+w1716952536
+8../testbench.sv
+F../testbench.sv
+!i122 0
+L0 2 170
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 ../testbench.sv|
+!s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 0
+o-sv -work xil_defaultlib
+R1

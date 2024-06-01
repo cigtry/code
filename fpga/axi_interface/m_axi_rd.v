@@ -25,14 +25,14 @@ module m_axi_rd#(
 (
   input  wire                                      clk             ,
   input  wire                                      rst_n           ,
-//�û��ӿ�
+//锟矫伙拷锟接匡拷
   input  wire                                      rd_start        ,
   input  wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   rd_addr         ,
   output wire      [C_M_AXI_DATA_WIDTH-1: 0]       rd_data         ,
   input  wire      [  07:00]                       rd_len          ,
   output wire                                      rd_done         ,
   output wire                                      rd_vld          ,
-  //AXI����ַͨ��
+  //AXI锟斤拷锟斤拷址通锟斤拷
   output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_arid        ,
   output reg       [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_araddr      ,
   output wire      [  07:00]                       axi_arlen       ,
@@ -45,7 +45,7 @@ module m_axi_rd#(
   output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_aruser      ,
   output reg                                       axi_arvalid     ,
   input  wire                                      axi_arready     ,
-//AXI������ͨ��
+//AXI锟斤拷锟斤拷锟斤拷通锟斤拷
   input  wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_rid         ,
   input  wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_rdata       ,
   input  wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_rresp       ,
@@ -115,7 +115,7 @@ module m_axi_rd#(
     endcase
   end
   
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_araddr <= {C_M_AXI_ADDR_WIDTH{1'b0}};
     end
@@ -127,7 +127,7 @@ module m_axi_rd#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_arvalid <= 1'b0;
     end
@@ -142,7 +142,7 @@ module m_axi_rd#(
     end
   end                                                               //always end
   
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       axi_rready <= 1'b0;
     end
@@ -155,7 +155,7 @@ module m_axi_rd#(
   end                                                               //always end
   
   
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       rd_index <= 8'd0;
     end
@@ -172,5 +172,5 @@ module m_axi_rd#(
 
   
   assign   rd_data = axi_r_handok ? axi_rdata : 32'h0;
-
+  assign   rd_vld =  axi_r_handok ;
 endmodule

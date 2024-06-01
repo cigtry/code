@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu May 23 21:38:42 2024
+# Process ID: 22764
+# Current directory: D:/DESKTOP/code/IMG
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6640 D:\DESKTOP\code\IMG\IMG.xpr
+# Log file: D:/DESKTOP/code/IMG/vivado.log
+# Journal file: D:/DESKTOP/code/IMG\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/DESKTOP/code/IMG/IMG.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/maccura/Desktop/DIP/IMG' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vitis/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 861.355 ; gain = 249.227
+open_bd_design {D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:module_ref:vga2hdmi:1.0 - vga2hdmi_0
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_1x(clk) and /vga2hdmi_0/clk_1x(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_tc_0/clken(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_tc_0/resetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /vga2hdmi_0/rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/aclken(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/aresetn(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /v_axi4s_vid_out_0/vid_io_out_ce(ce)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_5x(clk) and /vga2hdmi_0/clk_5x(undef)
+Successfully read diagram <zynq> from BD file <D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd>
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/DESKTOP/code/IMG/IMG.sdk -hwspec D:/DESKTOP/code/IMG/IMG.sdk/zynq_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/DESKTOP/code/IMG/IMG.sdk -hwspec D:/DESKTOP/code/IMG/IMG.sdk/zynq_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+update_module_reference zynq_vga2hdmi_0_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tmds_clk_n' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'tmds_clk_p' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'tmds_clk_n': Added interface parameter 'ASSOCIATED_RESET' with value 'rst_n'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tmds_clk_n': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'tmds_clk_n': FREQ_HZ bus parameter is missing for output clock interface.
+WARNING: [IP_Flow 19-3153] Bus Interface 'tmds_clk_p': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'tmds_clk_p': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd'
+INFO: [IP_Flow 19-1972] Upgraded zynq_vga2hdmi_0_1 from vga2hdmi_v1_0 1.0 to vga2hdmi_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_1x(clk) and /vga2hdmi_0_upgraded_ipi/clk_1x(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_5x(clk) and /vga2hdmi_0_upgraded_ipi/clk_5x(undef)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/locked(undef) and /vga2hdmi_0_upgraded_ipi/rst_n(rst)
+Wrote  : <D:\DESKTOP\code\IMG\IMG.srcs\sources_1\bd\zynq\zynq.bd> 
+Wrote  : <D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ui/bd_e1a0d542.ui> 

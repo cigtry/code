@@ -1,165 +1,250 @@
-
+/*
+ * sd_card.c
+ *
+ *  Created on: 2024Äê4ÔÂ28ÈÕ
+ *      Author: maccura
+ */
+#include "sd_card.h"
 #include "xil_printf.h"
 #include "ff.h"
-#include "sd_card.h"
+#include "xdevcfg.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "xil_io.h"
 #include "xparameters.h"
-#include "xil_types.h"
-#include "xil_cache.h"
-#include "ff.h"
-#include "xdevcfg.h"
-//æ–‡ä»¶ç³»ç»Ÿå˜é‡
+#define FILE_NAME "ZYNQ.txt"
+//#define BMP_NAME "desktop.bmp"
+#define BMP_NAME "ikun.bmp"
+
+const char src_str[30] = "www.kunkun.com";
 static FATFS fatfs;
-//æŒ‚åœ¨å‡½æ•°è¿”å›ä¸åŒå€¼çš„å«ä¹‰ï¼ˆç¿»è¯‘ç‰ˆï¼‰
-static const char * FR_Table[]=
-{
-    "FR_OKï¼šæˆåŠŸ",                                      /* (0) Succeeded */
-    "FR_DISK_ERRï¼šåº•å±‚ç¡¬ä»¶é”™è¯¯",                      /* (1) A hard error occurred in the low level disk I/O layer */
-    "FR_INT_ERRï¼šæ–­è¨€å¤±è´¥",                              /* (2) Assertion failed */
-    "FR_NOT_READYï¼šç‰©ç†é©±åŠ¨æ²¡æœ‰å·¥ä½œ",                  /* (3) The physical drive cannot work */
-    "FR_NO_FILEï¼šæ–‡ä»¶ä¸å­˜åœ¨",                          /* (4) Could not find the file */
-    "FR_NO_PATHï¼šè·¯å¾„ä¸å­˜åœ¨",                          /* (5) Could not find the path */
-    "FR_INVALID_NAMEï¼šæ— æ•ˆæ–‡ä»¶å",                      /* (6) The path name format is invalid */
-    "FR_DENIEDï¼šç”±äºç¦æ­¢è®¿é—®æˆ–è€…ç›®å½•å·²æ»¡è®¿é—®è¢«æ‹’ç»",  /* (7) Access denied due to prohibited access or directory full */
-    "FR_EXISTï¼šç”±äºè®¿é—®è¢«ç¦æ­¢è®¿é—®è¢«æ‹’ç»",              /* (8) Access denied due to prohibited access */
-    "FR_INVALID_OBJECTï¼šæ–‡ä»¶æˆ–è€…ç›®å½•å¯¹è±¡æ— æ•ˆ",          /* (9) The file/directory object is invalid */
-    "FR_WRITE_PROTECTEDï¼šç‰©ç†é©±åŠ¨è¢«å†™ä¿æŠ¤",              /* (10) The physical drive is write protected */
-    "FR_INVALID_DRIVEï¼šé€»è¾‘é©±åŠ¨å·æ— æ•ˆ",                  /* (11) The logical drive number is invalid */
-    "FR_NOT_ENABLEDï¼šå·ä¸­æ— å·¥ä½œåŒº",                      /* (12) The volume has no work area */
-    "FR_NO_FILESYSTEMï¼šæ²¡æœ‰æœ‰æ•ˆçš„FATå·",              /* (13) There is no valid FAT volume */
-    "FR_MKFS_ABORTEDï¼šç”±äºå‚æ•°é”™è¯¯f_mkfs()è¢«ç»ˆæ­¢",             /* (14) The f_mkfs() aborted due to any parameter error */
-    "FR_TIMEOUTï¼šåœ¨è§„å®šçš„æ—¶é—´å†…æ— æ³•è·å¾—è®¿é—®å·çš„è®¸å¯",         /* (15) Could not get a grant to access the volume within defined period */
-    "FR_LOCKEDï¼šç”±äºæ–‡ä»¶å…±äº«ç­–ç•¥æ“ä½œè¢«æ‹’ç»",                 /* (16) The operation is rejected according to the file sharing policy */
-    "FR_NOT_ENOUGH_COREï¼šæ— æ³•åˆ†é…é•¿æ–‡ä»¶åå·¥ä½œåŒº",             /* (17) LFN working buffer could not be allocated */
-    "FR_TOO_MANY_OPEN_FILESï¼šå½“å‰æ‰“å¼€çš„æ–‡ä»¶æ•°å¤§äº_FS_SHARE", /* (18) Number of open files > _FS_SHARE */
-    "FR_INVALID_PARAMETERï¼šå‚æ•°æ— æ•ˆ"                         /* (19) Given parameter is invalid */
-};
-//åˆå§‹åŒ–æ–‡ä»¶ç³»ç»Ÿ
+
+
+
 int platform_init_fs()
 {
 	FRESULT status;
 	TCHAR *Path = "0:/";
 	BYTE work[FF_MAX_SS];
-	//æ³¨å†Œä¸€ä¸ªå·¥ä½œåŒº
-	//åœ¨ä½¿ç”¨ä»»ä½•å…¶ä»–æ–‡ä»¶å‡½æ•°ä¹‹å‰ï¼Œå¿…é¡»ä½¿ç”¨f_mountå‡½æ•°ä½æ¯ä¸ªä½¿ç”¨å·æ³¨å†Œä¸€ä¸ªå·¥ä½œåŒº
-	status = f_mount(&fatfs,Path,1);//æŒ‚è½½SDå¡
+
+	status = f_mount(&fatfs , Path ,1);
 	if(status != FR_OK){
 		xil_printf("Volume is not FAT formated;formating FAT\r\n");
-		status = f_mkfs(Path , FM_FAT32 , 0 , work ,sizeof work);
+		status = f_mkfs(Path,FM_FAT32,0,work,sizeof work);
 		if(status != FR_OK){
-			xil_printf("Unable to format FATfs\r\n");
+			xil_printf("Unable to format FATfs %d\r\n",status);
 			return -1;
 		}
-	}
-	status = f_mount(&fatfs , Path , 1);
-	if(status != FR_OK){
-		xil_printf("Unable to format FATfs\r\n");
-		return -1;
+		status = f_mount(&fatfs , Path , 0);
+			if(status != FR_OK){
+				xil_printf("Unable to mount FATfs\r\n");
+				return -1;
+			}
 	}
 	return 0;
 }
-//æŒ‚è½½ SD(TF)å¡
-int sd_mount()
- {
- FRESULT status;
- //åˆå§‹åŒ–æ–‡ä»¶ç³»ç»Ÿï¼ˆæŒ‚è½½ SD å¡ï¼Œå¦‚æœæŒ‚è½½ä¸æˆåŠŸï¼Œåˆ™æ ¼å¼åŒ– SD å¡ï¼‰
- status = platform_init_fs();
- if(status){
-	 xil_printf("ERROR: %d!\n",status /*FR_Table[status]*/);
-	 return XST_FAILURE;
- 	 }
- return XST_SUCCESS;
- }
 
- //SD å¡å†™æ•°æ®
+int sd_mount()
+{
+	FRESULT status;
+	status = platform_init_fs();
+	if(status)
+	{
+		xil_printf("ERROR :f_mount returned %d\r\n", status);
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
+
+//SD ¿¨Ğ´Êı¾İ
  int sd_write_data(char *file_name,u32 src_addr,u32 byte_len)
  {
- FIL fil; //æ–‡ä»¶å¯¹è±¡
- UINT bw; //f_write å‡½æ•°è¿”å›å·²å†™å…¥çš„å­—èŠ‚æ•°
+ FIL fil; //ÎÄ¼ş¶ÔÏó
+ UINT bw; //f_write º¯Êı·µ»ØÒÑĞ´ÈëµÄ×Ö½ÚÊı
+ int status;
+ u32 bw_reg;
 
- //æ‰“å¼€ä¸€ä¸ªæ–‡ä»¶,å¦‚æœä¸å­˜åœ¨ï¼Œåˆ™åˆ›å»ºä¸€ä¸ªæ–‡ä»¶
-  f_open(&fil,file_name,FA_CREATE_ALWAYS | FA_WRITE);
-  //ç§»åŠ¨æ‰“å¼€çš„æ–‡ä»¶å¯¹è±¡çš„æ–‡ä»¶è¯»/å†™æŒ‡é’ˆ 0:æŒ‡å‘æ–‡ä»¶å¼€å¤´
-  f_lseek(&fil, 0);
-  //å‘æ–‡ä»¶ä¸­å†™å…¥æ•°æ®
-  f_write(&fil,(void*) src_addr,byte_len,&bw);
-  //å…³é—­æ–‡ä»¶
-  f_close(&fil);
-  return 0;
-  }
-
-  //SD å¡è¯»æ•°æ®
-  int sd_read_data(char *file_name,u32 src_addr,u32 byte_len)
-  {
-  FIL fil; //æ–‡ä»¶å¯¹è±¡
-  UINT br; //f_read å‡½æ•°è¿”å›å·²è¯»å‡ºçš„å­—èŠ‚æ•°
-
-  //æ‰“å¼€ä¸€ä¸ªåªè¯»çš„æ–‡ä»¶
-  f_open(&fil,file_name,FA_READ);
-  //ç§»åŠ¨æ‰“å¼€çš„æ–‡ä»¶å¯¹è±¡çš„æ–‡ä»¶è¯»/å†™æŒ‡é’ˆ 0:æŒ‡å‘æ–‡ä»¶å¼€å¤´
-  f_lseek(&fil,0);
-  //ä» SD å¡ä¸­è¯»å‡ºæ•°æ®
-  f_read(&fil,(void*)src_addr,byte_len,&br);
-  //å…³é—­æ–‡ä»¶
-  f_close(&fil);
-  return 0;
-  }
+ //´ò¿ªÒ»¸öÎÄ¼ş,Èç¹û²»´æÔÚ£¬Ôò´´½¨Ò»¸öÎÄ¼şÔ­×Ó¸çÔÚÏß½ÌÑ§£º www.yuanzige.com ÂÛÌ³:www.openedv.com
 
 
-//ä»SDå¡ä¸­è¯»å–BMPå›¾ç‰‡
-void load_sd_bmp(u8 *frame,	u8 cnt)
+ status = f_open(&fil,file_name,FA_CREATE_ALWAYS | FA_WRITE);
+ if(status){
+	 xil_printf("f_open error :%d \n", status);
+ }
+ //ÒÆ¶¯´ò¿ªµÄÎÄ¼ş¶ÔÏóµÄÎÄ¼ş¶Á/Ğ´Ö¸Õë 0:Ö¸ÏòÎÄ¼ş¿ªÍ·
+ f_lseek(&fil, 0);
+ //ÏòÎÄ¼şÖĞĞ´ÈëÊı¾İ
+ bw_reg =  f_write(&fil,(void*) src_addr,byte_len,&bw);
+ xil_printf("bw_reg = %d \t src_addr = %s \t &src_addr = %d\n",bw_reg,src_addr,&src_addr);
+ //¹Ø±ÕÎÄ¼ş
+ f_close(&fil);
+ return 0;
+ }
+
+ //SD ¿¨¶ÁÊı¾İ
+ int sd_read_data(char *file_name,u32 src_addr,u32 byte_len)
+ {
+ FIL fil; //ÎÄ¼ş¶ÔÏó
+ UINT br; //f_read º¯Êı·µ»ØÒÑ¶Á³öµÄ×Ö½ÚÊı
+
+ //´ò¿ªÒ»¸öÖ»¶ÁµÄÎÄ¼ş
+ f_open(&fil,file_name,FA_READ);
+ //ÒÆ¶¯´ò¿ªµÄÎÄ¼ş¶ÔÏóµÄÎÄ¼ş¶Á/Ğ´Ö¸Õë 0:Ö¸ÏòÎÄ¼ş¿ªÍ·
+ f_lseek(&fil,0);
+ //´Ó SD ¿¨ÖĞ¶Á³öÊı¾İ
+ f_read(&fil,(void*)src_addr,byte_len,&br);
+ //¹Ø±ÕÎÄ¼ş
+ f_close(&fil);
+ return 0;
+}
+
+int sdcard_init()
+ {
+
+	 int status,len;
+	 			char dest_str[30]="";
+	 			status = sd_mount();
+	 			if(status != XST_SUCCESS){
+	 				xil_printf("Fail to open SD card!\n");
+	 				return 0;
+	 			}
+	 			else
+	 				xil_printf("Success to open sd card!\n");
+
+	 			len = strlen(src_str);
+	 			xil_printf("len =%d\n",len);
+	 			sd_write_data(FILE_NAME,(u32)src_str,len);
+	 			sd_read_data(FILE_NAME,(u32)dest_str,len);
+
+	 			if(strcmp(src_str,dest_str)==0)
+	 				xil_printf("equal\n");
+	 			else
+	 				xil_printf("not equal\n");
+ }
+
+//´ÓSD¿¨ÖĞ¶ÁÈ¡BMPÍ¼Æ¬
+void load_sd_bmp(u8 *frame)
 {
 	static 	FATFS fatfs;
 	FIL 	fil;
+	u8		bmp_head[54];
 	UINT 	*bmp_width,*bmp_height,*bmp_size;
-	u8 		bmp_head[54];
 	UINT 	br;
-	u8      *frame_col;
 	int 	i;
 
-	//æŒ‚è½½æ–‡ä»¶ç³»ç»Ÿ
-	f_mount(&fatfs,"",1);
-
-	//æ‰“å¼€æ–‡ä»¶
-	if(cnt == 0)
-		f_open(&fil,PICTURE_NAME1,FA_READ);
-	else if(cnt == 1)
-		f_open(&fil,PICTURE_NAME2,FA_READ);
-	else if(cnt == 2)
-		f_open(&fil,PICTURE_NAME3,FA_READ);
-
-	//ç§»åŠ¨æ–‡ä»¶è¯»å†™æŒ‡é’ˆåˆ°æ–‡ä»¶å¼€å¤´
+	//¹ÒÔØÎÄ¼şÏµÍ³
+	f_mount(&fatfs,"0:/",1);
+	//´ò¿ªÎÄ¼ş
+	f_open(&fil,BMP_NAME,FA_READ);
+	//ÒÆ¶¯ÎÄ¼ş¶ÁĞ´Ö¸Õëµ½ÎÄ¼ş¿ªÍ·FILE_SYSTEM_INTERFACE_SD
 	f_lseek(&fil,0);
-
-	//è¯»å–BMPæ–‡ä»¶å¤´
+	//¶ÁÈ¡BMPÎÄ¼şÍ·
 	f_read(&fil,bmp_head,54,&br);
-	xil_printf("picture head: \n\r");
+	xil_printf("%s head: \r\n",BMP_NAME);
 	for(i=0;i<54;i++)
-		xil_printf(" %x",bmp_head[i]);
-
-	//æ‰“å°BMPå›¾ç‰‡åˆ†è¾¨ç‡å’Œå¤§å°
-	bmp_width  = (UINT *)(bmp_head + 0x12);//1920*3*
-	bmp_height = (UINT *)(bmp_head + 0x16);//1080
+		xil_printf(" %x\n",bmp_head[i]);
+	xil_printf("%s end \r\n", BMP_NAME);
+	//´òÓ¡BMPÍ¼Æ¬·Ö±æÂÊºÍ´óĞ¡
+	bmp_width  = (UINT *)(bmp_head + 0x12);
+	bmp_height = (UINT *)(bmp_head + 0x16);
 	bmp_size   = (UINT *)(bmp_head + 0x22);
-	xil_printf("\n width = %d, height = %d, size = %d bytes \n\r",*bmp_width,*bmp_height,*bmp_size);
-
-    //è¿™ç§å†™å…¥å†…å­˜çš„æ–¹æ³•æ‰æ˜¯å¯¹çš„
-	for(int i = 0;i<*bmp_height;i++)
-	{
-		frame_col = frame + (1080 - i - 1)*1920*4;//æœ€åä¸€è¡Œçš„ç¬¬ä¸€ä¸ªåˆ—å¼€å§‹æ˜¾ç¤º
-		for(int j = 0; j<*bmp_width; j++)
-		{
-			f_read(&fil,frame_col,3,&br);
-			*(frame_col+3) = 0x00;//å¯¹åº”æˆ‘çš„AXIæ€»çº¿fifoè¯»å–æ•°æ®çš„æ–¹å¼
-			frame_col = frame_col + 4;
-		}
+	xil_printf("width = %d, height = %d, size = %d bytes \r\n",
+			*bmp_width,*bmp_height,*bmp_size);
+	//¶Á³öÍ¼Æ¬£¬Ğ´ÈëDDR
+	for(i=*bmp_height-1;i>=0;i--){
+		f_read(&fil,frame+i*(*bmp_width)*3,(*bmp_width)*3,&br);
 	}
-	//å…³é—­æ–‡ä»¶
+
+	//¹Ø±ÕÎÄ¼ş
 	f_close(&fil);
 
-//	Xil_DCacheFlush();     //åˆ·æ–°Cacheï¼Œæ•°æ®æ›´æ–°è‡³DDR3ä¸­ï¼ˆå¦‚æœä¸»å‡½æ•°æ²¡æœ‰å…³é—­cacheï¼Œè¿™é‡Œå°±éœ€è¦åˆ·æ–°åˆ°DDRä¸­ï¼‰
+	Xil_DCacheFlush();     //Ë¢ĞÂCache£¬Êı¾İ¸üĞÂÖÁDDR3ÖĞ
 	xil_printf("show bmp\n\r");
+
 }
+
+
+void BMP_ReadHeader(uint8_t *header, BMP_HeaderTypeDef *bmp)
+{
+
+	bmp->fileHeader->bfType = ((*header) << 8) | (*(header + 1));
+	header += 2;
+
+	bmp->fileHeader->bfSize = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                         ((*(header + 1)) << 8) | (*header);
+	header += 8;
+
+	bmp->fileHeader->bfOffBits = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                            ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader->bitSize = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                          ((*(header + 1)) << 8) | (*header);
+	xil_printf("bmp->infoHeader->bitSize = %d  \n",
+			bmp->infoHeader->bitSize );
+	header += 4;
+
+	bmp->infoHeader->biWidth = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                          ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader->biHeight = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                           ((*(header + 1)) << 8) | (*header);
+	header += 6;
+
+	bmp->infoHeader->biBitCount = ((*(header + 1)) << 8) | (*header);
+
+	header += 2;
+
+	bmp->infoHeader->biCompression = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader->biSizeImage = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                              ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader->biXPelsPerMeter = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                  ((*(header + 1)) << 8) | (*header);
+	header += 4;
+
+	bmp->infoHeader->biYPelsPerMeter = ((*(header + 3)) << 24) | ((*(header + 2)) << 16) |
+	                                  ((*(header + 1)) << 8) | (*header);
+}
+
+void BMP_Picture(uint8_t *dir , uint8_t  * buf ,uint32_t len)
+{
+		FRESULT res;
+		FIL fsrc;
+		UINT  br;
+		UINT  a;
+
+		uint8_t buffer[1024];
+
+		BMP_HeaderTypeDef bmpHeader;
+
+		/* ´ò¿ªÒª¶ÁÈ¡µÄÎÄ¼ş */
+		res = f_open(&fsrc, BMP_NAME, FA_READ);
+
+		if(res == FR_OK)   //´ò¿ª³É¹¦
+	    {
+			/* ¶ÁÈ¡BMPÎÄ¼şµÄÎÄ¼şĞÅÏ¢ */
+	        res = f_read(&fsrc, buffer, sizeof(buffer), &br);
+
+			/* ½«Êı×éÀïÃæµÄÊı¾İ·ÅÈëµ½½á¹¹Êı×éÖĞ£¬²¢ÅÅĞòºÃ */
+			BMP_ReadHeader(buffer, &bmpHeader);
+
+			a = bmpHeader.fileHeader->bfOffBits;    //È¥µôÎÄ¼şĞÅÏ¢²Å¿ªÊ¼ÊÇÏñËØÊı¾İ
+
+			res=f_lseek(&fsrc, a);
+			if(res)
+			{
+				return 0;
+			}
+			res = f_read(&fsrc, buf, len, &br);
+	    }
+    f_close(&fsrc);  //²»ÂÛÊÇ´ò¿ª£¬»¹ÊÇĞÂ½¨ÎÄ¼ş£¬Ò»¶¨¼ÇµÃ¹Ø±Õ
+}
+
+
+

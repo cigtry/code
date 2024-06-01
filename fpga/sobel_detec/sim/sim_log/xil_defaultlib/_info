@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maccura/Desktop/code-main/fpga/sobel_detec/sim/sim_log
+vgenerate_3x3_winndows
+!s10a 1716967414
+Z1 !s110 1717147863
+!i10b 1
+!s100 :kOg`nX2MflTh8H=Hi38K0
+IihHW?DRD9ZWOHgBTdfY`m0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1716967414
+8../../src/generate_3x3_winndows.v
+F../../src/generate_3x3_winndows.v
+Z3 L0 26
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1717147863.000000
+Z6 !s107 ../../src/sobel_detec.v|../../src/sqrt.v|../../src/sync_fifo.v|../../src/generate_3x3_winndows.v|
+Z7 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 1
+Z8 !s102 +cover
+Z9 o+cover -work xil_defaultlib
+Z10 tCvgOpt 0
+vsobel_detec
+!s10a 1717148245
+!s110 1717148251
+!i10b 1
+!s100 oTLJ@g`I<_f_JAm_]nF8l1
+I0SG]0iL3g5:SiA`AjW[`?1
+R2
+R0
+w1717148245
+8../../src/sobel_detec.v
+F../../src/sobel_detec.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1717148251.000000
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vsqrt
+!s10a 1679973960
+R1
+!i10b 1
+!s100 5CTo[H?U]?oW1OmFRTlU02
+IJRKY3LzCGzHT=K8DfT80=0
+R2
+R0
+w1679973960
+8../../src/sqrt.v
+F../../src/sqrt.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vsync_fifo
+!s10a 1716881010
+R1
+!i10b 1
+!s100 50aDIh4e872boi`280a7C1
+IYRH3iek0lH^@c[0[EdAZe1
+R2
+R0
+w1716881010
+8../../src/sync_fifo.v
+F../../src/sync_fifo.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vtestbench
+!s10a 1717147852
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 l<J;g[6AWRdYRlQ=zmf`R1
+I=UO:T8@>`zm4FeZVBkA9J3
+R2
+!s105 testbench_sv_unit
+S1
+R0
+w1717147852
+8../testbench.sv
+F../testbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../testbench.sv|
+!s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 1
+o-sv -work xil_defaultlib
+R10

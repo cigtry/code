@@ -5,6 +5,10 @@
 #include "xil_io.h"
 #include "xparameters.h"
 #include "xil_cache.h"
+#include "sd_card.h"
+#include "ff.h"
+#include "emio_sccb_cfg.h"
+#include "ov5640_init.h"
 
 #define H_STRIDE            1280
 #define H_ACTIVE            1280
@@ -13,7 +17,12 @@
 
 #define VDMA_BASEADDR   XPAR_AXI_VDMA_0_BASEADDR
 #define VIDEO_BASEADDR0 0x08000000
+#define VIDEO_BASEADDR1 0x09000000
+#define VIDEO_BASEADDR2 0x0a000000
+#define VIDEO_BASEADDR3 0x0d000000
 #define BUF_SIZE 		((H_STRIDE*V_ACTIVE)*3)
+
+
 
 
 
@@ -41,38 +50,98 @@ int VDMA_init( )
 //		}
 //	}
 	//Xil_DCacheFlush();
-	Xil_Out32((VDMA_BASEADDR + 0x000), 0x3);//0011
-	Xil_Out32((VDMA_BASEADDR + 0x05c), VIDEO_BASEADDR0);
-	Xil_Out32((VDMA_BASEADDR + 0x060), VIDEO_BASEADDR0);
-	Xil_Out32((VDMA_BASEADDR + 0x064), VIDEO_BASEADDR0);
-	Xil_Out32((VDMA_BASEADDR + 0x058), (H_STRIDE*3));
-	Xil_Out32((VDMA_BASEADDR + 0x054), (H_ACTIVE*3));
-	Xil_Out32((VDMA_BASEADDR + 0x050), V_ACTIVE);
-	return 1;
-}
+	int i;
+	for(i=0;i<VIDEO_LENGTH;i++){
+			Xil_Out16((VIDEO_BASEADDR0 + i), 0x00);
+			Xil_Out16((VIDEO_BASEADDR1 + i), 0x00);
+			Xil_Out16((VIDEO_BASEADDR2 + i), 0x00);
+		}
+		//VDMA_WRITE
+		Xil_Out32((VDMA_BASEADDR + 0x030), 0x108B);// enable circular mode
+		Xil_Out32((VDMA_BASEADDR + 0x0AC), VIDEO_BASEADDR0);	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x0B0), VIDEO_BASEADDR1);	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x0B4), VIDEO_BASEADDR2);	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x0A8), (H_STRIDE*3));		// h offset (H_STRIDE* 3) bytes
+		Xil_Out32((VDMA_BASEADDR + 0x0A4), (H_ACTIVE*3));		// h size (H_ACTIVE * 3) bytes
+		Xil_Out32((VDMA_BASEADDR + 0x0A0), V_ACTIVE);			// v size (V_ACTIVE)
+		//VDMA_READ
+		Xil_Out32((VDMA_BASEADDR + 0x000), 0x8B); 		// enable circular mode
+		Xil_Out32((VDMA_BASEADDR + 0x05c), VIDEO_BASEADDR0); 	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x060), VIDEO_BASEADDR1); 	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x064), VIDEO_BASEADDR2); 	// start address
+		Xil_Out32((VDMA_BASEADDR + 0x058), (H_STRIDE*3)); 		// h offset (H_STRIDE * 3) bytes
+		Xil_Out32((VDMA_BASEADDR + 0x054), (H_ACTIVE*3)); 		// h size (H_ACTIVE * 3) bytes
+		Xil_Out32((VDMA_BASEADDR + 0x050), V_ACTIVE); 			// v size (V_ACTIVE
+ }
 
 
 int main()
-{
+{	u32 status;
+u16 cmos_h_pixel;                    //ov5640 DVP 输出水平像素点数
+u16 cmos_v_pixel;                    //ov5640 DVP 输出垂直像素点数
+u16 total_h_pixel;                   //ov5640 水平总像素大小
+u16 total_v_pixel;                   //ov5640 垂直总像素大小
+int i;
 
-			VDMA_init();
+cmos_h_pixel = 1280;                 //设置OV5640输出分辨率为1280*720
+cmos_v_pixel = 720;
 
-			//int j=0;
-//			u8 r,g,b;
-//			for (int row=0;row < V_ACTIVE;row ++)
-//					{
-//						for(int col=0;col<H_ACTIVE;col++)
-//						{
-//							b = gImage_picture[j+2];
-//							g = gImage_picture[j+1];
-//							r = gImage_picture[j];
-//							Xil_Out32((VIDEO_BASEADDR0+j),((r<<16)|(g<<8)|(b<<0)));
-//							j+=3;
-//						}
-//					}
+total_h_pixel = 2570;
+total_v_pixel = 980;
+init_platform();
+VDMA_init( );
+load_sd_bmp((u8 *)VIDEO_BASEADDR3);
+printf(" *               ii.                                         ;9ABH,\n");
+printf(" *              SA391,                                    .r9GG35&G\n");
+printf(" *              &#ii13Gh;                               i3X31i;:,rB1 \n");
+printf(" *              iMs,:,i5895,                         .5G91:,:;:s1:8A     \n");
+printf(" *               33::::,,;5G5,                     ,58Si,,:::,sHX;iH1       \n");
+printf("*                Sr.,:;rs13BBX35hh11511h5Shhh5S3GAXS:.,,::,,1AG3i,GG        \n");
+printf("*                .G51S511sr;;iiiishS8G89Shsrrsh59S;.,,,,,..5A85Si,h8        \n");
+printf("*               :SB9s:,............................,,,.,,,SASh53h,1G.       \n");
+printf(" *            .r18S;..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,....,,.1H315199,rX,       \n");
+printf(" *          ;S89s,..,,,,,,,,,,,,,,,,,,,,,,,....,,.......,,,;r1ShS8,;Xi       \n");
+printf(" *        i55s:.........,,,,,,,,,,,,,,,,.,,,......,.....,,....r9&5.:X1       \n");
+printf(" *       59;.....,.     .,,,,,,,,,,,...        .............,..:1;.:&s       \n");
+printf(" *      s8,..;53S5S3s.   .,,,,,,,.,..      i15S5h1:.........,,,..,,:99       \n");
+printf(" *      93.:39s:rSGB@A;  ..,,,,.....    .SG3hhh9G&BGi..,,,,,,,,,,,,.,83      \n");
+printf(" *      G5.G8  9#@@@@@X. .,,,,,,.....  iA9,.S&B###@@Mr...,,,,,,,,..,.;Xh     \n");
+printf(" *      Gs.X8 S@@@@@@@B:..,,,,,,,,,,. rA1 ,A@@@@@@@@@H:........,,,,,,.iX:    \n");
+printf(" *     ;9. ,8A#@@@@@@#5,.,,,,,,,,,... 9A. 8@@@@@@@@@@M;    ....,,,,,,,,S8    \n");
+printf(" *     X3    iS8XAHH8s.,,,,,,,,,,...,..58hH@@@@@@@@@Hs       ...,,,,,,,:Gs   \n");
+printf(" *    r8,        ,,,...,,,,,,,,,,.....  ,h8XABMMHX3r.          .,,,,,,,.rX:  \n");
+printf(" *   :9, .    .:,..,:;;;::,.,,,,,..          .,,.               ..,,,,,,.59  \n");
+printf(" *  .Si      ,:.i8HBMMMMMB&5,....                    .            .,,,,,.sMr \n");
+printf(" *  SS       :: h@@@@@@@@@@#; .                     ...  .         ..,,,,iM5 \n");
+printf(" *  91  .    ;:.,1&@@@@@@MXs.                            .          .,,:,:&S \n");
+printf(" *  hS ....  .:;,,,i3MMS1;..,..... .  .     ...                     ..,:,.99 \n");
+printf(" *  ,8; ..... .,:,..,8Ms:;,,,...                                     .,::.83 \n");
+printf(" *   s&: ....  .sS553B@@HX3s;,.    .,;13h.                            .:::&1 \n");
+printf(" *    SXr  .  ...;s3G99XA&X88Shss11155hi.                             ,;:h&, \n");
+printf(" *     iH8:  . ..   ,;iiii;,::,,,,,.                                 .;irHA  \n");
+printf(" *      ,8X5;   .     .......                                       ,;iihS8Gi\n");
+printf(" *         1831,                                                 .,;irrrrrs&@\n");
+printf(" *           ;5A8r.                                            .:;iiiiirrss1H\n");
+printf(" *             :X@H3s.......                                .,:;iii;iiiiirsrh\n");
+printf(" *              r#h:;,...,,.. .,,:;;;;;:::,...              .:;;;;;;iiiirrss1\n");
+printf(" *             ,M8 ..,....,.....,,::::::,,...         .     .,;;;iiiiiirss11h\n");
+printf(" *             8B;.,,,,,,,.,.....          .           ..   .:;;;;iirrsss111h\n");
+printf(" *            i@5,:::,,,,,,,,.... .                   . .:::;;;;;irrrss111111\n");
+printf(" *            9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111\n");
 
-			//Xil_DCacheFlush();
+emio_init();                         //初始化EMIO
+status = ov5640_init( cmos_h_pixel,  //初始化ov5640
+						  cmos_v_pixel,
+						 total_h_pixel,
+						 total_v_pixel);
+if(status == 0)
+	printf("OV5640 detected successful!\r\n");
+	else
+		printf("OV5640 detected failed!\r\n");
+ov5640_config_done();
+cleanup_platform();
 
-
-			return 0;
+return 0;
 }
+
+

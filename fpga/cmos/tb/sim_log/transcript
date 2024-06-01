@@ -1,0 +1,533 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ../run.do
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:24 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:57:24 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:57:24 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 14:57:24 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 14:57:24 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftbh6t1d".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbh6t1d
+restart
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 27864715 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:01:18 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:01:18 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:01:18 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:01:18 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:01:20 on May 24,2024, Elapsed time: 0:03:56
+# Errors: 3, Warnings: 6
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:01:20 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftwyii7h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwyii7h
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:22 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:03:22 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:03:22 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:03:22 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:03:24 on May 24,2024, Elapsed time: 0:02:04
+# Errors: 3, Warnings: 4
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:03:24 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftb3vm3s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftb3vm3s
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 27864715 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 37152735 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  # End time: 15:32:27 on May 24,2024, Elapsed time: 0:36:45
+# Errors: 0, Warnings: 3
+ology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:05:13 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:05:13 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:05:13 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:05:13 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:05:15 on May 24,2024, Elapsed time: 0:01:51
+# Errors: 3, Warnings: 7
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:05:15 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftyeyh6g".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyeyh6g
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:11:00 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:11:00 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:11:00 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:11:00 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:11:02 on May 24,2024, Elapsed time: 0:05:47
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:11:02 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftd9ik6r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd9ik6r
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:52 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:13:52 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:13:52 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:13:52 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:13:54 on May 24,2024, Elapsed time: 0:02:52
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:13:54 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlft1fm1id".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1fm1id
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:18:52 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:18:52 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:18:52 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:18:52 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:18:54 on May 24,2024, Elapsed time: 0:05:00
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:18:54 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlft8dgacb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8dgacb
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:16 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:21:16 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:21:16 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:21:16 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:21:18 on May 24,2024, Elapsed time: 0:02:24
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:21:18 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftdfazd6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdfazd6
+# Break key hit
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:54 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:22:54 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:54 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:22:54 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:22:56 on May 24,2024, Elapsed time: 0:01:38
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:22:56 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:01 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:23:01 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:01 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Skipping module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:23:01 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:23:03 on May 24,2024, Elapsed time: 0:00:07
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:23:03 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftydw1mi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftydw1mi
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:25:01 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:25:01 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:25:01 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:25:01 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:25:03 on May 24,2024, Elapsed time: 0:02:00
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:25:03 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftqv7xq8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqv7xq8
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+do ../run.do
+# ** Warning: (vlib-34) Library already exists at "xil_defaultlib".
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap xil_defaultlib xil_defaultlib 
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:26:55 on May 24,2024
+# vlog -reportprogress 300 -sv -incr -work xil_defaultlib ../testbench.sv 
+# -- Skipping module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:26:55 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:26:55 on May 24,2024
+# vlog -reportprogress 300 -incr "+cover" -work xil_defaultlib -f ../design_ver.f 
+# -- Compiling module cmos_capture
+# 
+# Top level modules:
+# 	cmos_capture
+# End time: 15:26:55 on May 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:26:57 on May 24,2024, Elapsed time: 0:01:54
+# Errors: 3, Warnings: 5
+# vsim -voptargs=""+acc"" -t ps -quiet -L xil_defaultlib -lib xil_defaultlib xil_defaultlib.testbench 
+# Start time: 15:26:57 on May 24,2024
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./../run.do line 24
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/testbench/u_cmos_capture/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maccura  Hostname: fy7245m220402  ProcessID: 10208
+#           Attempting to use alternate WLF file "./wlftjtfx7f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjtfx7f
+run -all
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 655 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 9288675 ns  Iteration: 1  Instance: /testbench
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 427 of file "../../../../data/ikun.dat". (Current address [921600], address range [0:921599])    : ../testbench.sv(41)
+#    Time: 18576695 ns  Iteration: 1  Instance: /testbench
+# End time: 15:32:33 on May 24,2024, Elapsed time: 0:05:36
+# Errors: 3, Warnings: 5

@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Apr 25 14:28:50 2024
-//Host        : fy7245m220402 running 64-bit major release  (build 9200)
+//Date        : Sat May 25 23:22:37 2024
+//Host        : cigtry running 64-bit major release  (build 9200)
 //Command     : generate_target zynq_wrapper.bd
 //Design      : zynq_wrapper
 //Purpose     : IP block netlist
@@ -31,6 +31,11 @@ module zynq_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    GPIO_0_0_tri_io,
+    cmos_data_0,
+    cmos_herf_0,
+    cmos_pclk_0,
+    cmos_vsync_0,
     tmds_clk_n_0,
     tmds_clk_p_0,
     tmds_data_n_0,
@@ -56,6 +61,11 @@ module zynq_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  inout [4:0]GPIO_0_0_tri_io;
+  input [7:0]cmos_data_0;
+  input cmos_herf_0;
+  input cmos_pclk_0;
+  input cmos_vsync_0;
   output tmds_clk_n_0;
   output tmds_clk_p_0;
   output [2:0]tmds_data_n_0;
@@ -82,11 +92,60 @@ module zynq_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [0:0]GPIO_0_0_tri_i_0;
+  wire [1:1]GPIO_0_0_tri_i_1;
+  wire [2:2]GPIO_0_0_tri_i_2;
+  wire [3:3]GPIO_0_0_tri_i_3;
+  wire [4:4]GPIO_0_0_tri_i_4;
+  wire [0:0]GPIO_0_0_tri_io_0;
+  wire [1:1]GPIO_0_0_tri_io_1;
+  wire [2:2]GPIO_0_0_tri_io_2;
+  wire [3:3]GPIO_0_0_tri_io_3;
+  wire [4:4]GPIO_0_0_tri_io_4;
+  wire [0:0]GPIO_0_0_tri_o_0;
+  wire [1:1]GPIO_0_0_tri_o_1;
+  wire [2:2]GPIO_0_0_tri_o_2;
+  wire [3:3]GPIO_0_0_tri_o_3;
+  wire [4:4]GPIO_0_0_tri_o_4;
+  wire [0:0]GPIO_0_0_tri_t_0;
+  wire [1:1]GPIO_0_0_tri_t_1;
+  wire [2:2]GPIO_0_0_tri_t_2;
+  wire [3:3]GPIO_0_0_tri_t_3;
+  wire [4:4]GPIO_0_0_tri_t_4;
+  wire [7:0]cmos_data_0;
+  wire cmos_herf_0;
+  wire cmos_pclk_0;
+  wire cmos_vsync_0;
   wire tmds_clk_n_0;
   wire tmds_clk_p_0;
   wire [2:0]tmds_data_n_0;
   wire [2:0]tmds_data_p_0;
 
+  IOBUF GPIO_0_0_tri_iobuf_0
+       (.I(GPIO_0_0_tri_o_0),
+        .IO(GPIO_0_0_tri_io[0]),
+        .O(GPIO_0_0_tri_i_0),
+        .T(GPIO_0_0_tri_t_0));
+  IOBUF GPIO_0_0_tri_iobuf_1
+       (.I(GPIO_0_0_tri_o_1),
+        .IO(GPIO_0_0_tri_io[1]),
+        .O(GPIO_0_0_tri_i_1),
+        .T(GPIO_0_0_tri_t_1));
+  IOBUF GPIO_0_0_tri_iobuf_2
+       (.I(GPIO_0_0_tri_o_2),
+        .IO(GPIO_0_0_tri_io[2]),
+        .O(GPIO_0_0_tri_i_2),
+        .T(GPIO_0_0_tri_t_2));
+  IOBUF GPIO_0_0_tri_iobuf_3
+       (.I(GPIO_0_0_tri_o_3),
+        .IO(GPIO_0_0_tri_io[3]),
+        .O(GPIO_0_0_tri_i_3),
+        .T(GPIO_0_0_tri_t_3));
+  IOBUF GPIO_0_0_tri_iobuf_4
+       (.I(GPIO_0_0_tri_o_4),
+        .IO(GPIO_0_0_tri_io[4]),
+        .O(GPIO_0_0_tri_i_4),
+        .T(GPIO_0_0_tri_t_4));
   zynq zynq_i
        (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
@@ -109,6 +168,13 @@ module zynq_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .GPIO_0_0_tri_i({GPIO_0_0_tri_i_4,GPIO_0_0_tri_i_3,GPIO_0_0_tri_i_2,GPIO_0_0_tri_i_1,GPIO_0_0_tri_i_0}),
+        .GPIO_0_0_tri_o({GPIO_0_0_tri_o_4,GPIO_0_0_tri_o_3,GPIO_0_0_tri_o_2,GPIO_0_0_tri_o_1,GPIO_0_0_tri_o_0}),
+        .GPIO_0_0_tri_t({GPIO_0_0_tri_t_4,GPIO_0_0_tri_t_3,GPIO_0_0_tri_t_2,GPIO_0_0_tri_t_1,GPIO_0_0_tri_t_0}),
+        .cmos_data_0(cmos_data_0),
+        .cmos_herf_0(cmos_herf_0),
+        .cmos_pclk_0(cmos_pclk_0),
+        .cmos_vsync_0(cmos_vsync_0),
         .tmds_clk_n_0(tmds_clk_n_0),
         .tmds_clk_p_0(tmds_clk_p_0),
         .tmds_data_n_0(tmds_data_n_0),

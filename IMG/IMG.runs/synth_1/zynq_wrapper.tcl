@@ -17,45 +17,65 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache D:/DESKTOP/code/IMG/.Xil/Vivado-4532-cigtry/incrSyn
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/maccura/Desktop/DIP/IMG/IMG.cache/wt [current_project]
-set_property parent.project_path C:/Users/maccura/Desktop/DIP/IMG/IMG.xpr [current_project]
+set_property webtalk.parent_dir D:/DESKTOP/code/IMG/IMG.cache/wt [current_project]
+set_property parent.project_path D:/DESKTOP/code/IMG/IMG.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/maccura/Desktop/DIP/IMG/IMG.cache/ip [current_project]
+set_property ip_output_repo d:/DESKTOP/code/IMG/IMG.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v
-add_files C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/bd_7cab_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/bd_7cab_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_7/bd_7cab_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_8/bd_7cab_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_xbar_0/zynq_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/sources_1/bd/zynq/zynq_ooc.xdc]
+read_verilog -library xil_defaultlib D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/hdl/zynq_wrapper.v
+add_files D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/zynq.bd
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_processing_system7_0_0/zynq_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_vdma_0_0/zynq_axi_vdma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_tc_0_0/zynq_v_tc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_axi4s_vid_out_0_0/zynq_v_axi4s_vid_out_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_1/bd_7cab_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_2/bd_7cab_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_3/bd_7cab_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_4/bd_7cab_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_5/bd_7cab_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_6/bd_7cab_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_10/bd_7cab_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_11/bd_7cab_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_12/bd_7cab_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_16/bd_7cab_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_17/bd_7cab_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_18/bd_7cab_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_19/bd_7cab_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_20/bd_7cab_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_21/bd_7cab_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_22/bd_7cab_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_23/bd_7cab_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_24/bd_7cab_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_axi_smc_0/bd_0/ip/ip_25/bd_7cab_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_rst_ps7_0_100M_0/zynq_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_xbar_0/zynq_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_clk_wiz_0_1/zynq_clk_wiz_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_vid_in_axi4s_0_0/zynq_v_vid_in_axi4s_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_v_vid_in_axi4s_0_0/zynq_v_vid_in_axi4s_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/ip/zynq_auto_pc_0/zynq_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all D:/DESKTOP/code/IMG/IMG.srcs/sources_1/bd/zynq/zynq_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -65,8 +85,8 @@ set_property used_in_implementation false [get_files -all C:/Users/maccura/Deskt
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/constrs_1/new/img.xdc
-set_property used_in_implementation false [get_files C:/Users/maccura/Desktop/DIP/IMG/IMG.srcs/constrs_1/new/img.xdc]
+read_xdc D:/DESKTOP/code/IMG/IMG.srcs/constrs_1/new/img.xdc
+set_property used_in_implementation false [get_files D:/DESKTOP/code/IMG/IMG.srcs/constrs_1/new/img.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

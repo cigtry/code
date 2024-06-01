@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/maccura/Desktop/code-main/fpga/region_bin/sim/sim_log
+vgenerate_5x5_winndows
+Z1 !s110 1717143419
+!i10b 1
+!s100 MWe80hKBzHhj7>1eegE1c1
+I>R9aT<l1:MCF=T0<zlEX=0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1717036583
+8../../src/generate_5x5_winndows.v
+F../../src/generate_5x5_winndows.v
+Z3 L0 26
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1717143419.000000
+Z6 !s107 ../../src/region_bin.v|../../src/sync_fifo.v|../../src/generate_5x5_winndows.v|
+Z7 !s90 -reportprogress|300|-incr|+cover|-work|xil_defaultlib|-f|../design_ver.f|
+!i113 1
+Z8 !s102 +cover
+Z9 o+cover -work xil_defaultlib
+Z10 tCvgOpt 0
+vregion_bin
+R1
+!i10b 1
+!s100 GGAgliiEoE?=oQUMN_e^12
+ICa;M`UfKd:9hT?3@[6C0A3
+R2
+R0
+w1717142748
+8../../src/region_bin.v
+F../../src/region_bin.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vsync_fifo
+R1
+!i10b 1
+!s100 50aDIh4e872boi`280a7C1
+IYRH3iek0lH^@c[0[EdAZe1
+R2
+R0
+w1716881010
+8../../src/sync_fifo.v
+F../../src/sync_fifo.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 1
+R8
+R9
+R10
+vtestbench
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 IRa:;7X;h<XJcXn<P6Bh71
+ITgXfU?b[d6=M`Mf8YOZD50
+R2
+!s105 testbench_sv_unit
+S1
+R0
+w1717143381
+8../testbench.sv
+F../testbench.sv
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1717143418.000000
+!s107 ../testbench.sv|
+!s90 -reportprogress|300|-sv|-incr|-work|xil_defaultlib|../testbench.sv|
+!i113 1
+o-sv -work xil_defaultlib
+R10

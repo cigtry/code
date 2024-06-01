@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1714026980">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1716650939">
   <File Type="PA-TCL" Name="zynq_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="zynq_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="zynq_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="zynq_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="zynq_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="zynq_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="zynq_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="zynq_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="zynq_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/hdmi/encode.v">
@@ -30,6 +33,13 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../hdmi/vga2hdmi.v"/>
         <Attr Name="ImportTime" Val="1713753899"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdmi/cmos_capture.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -83,5 +93,7 @@
   <BlockFileSet Type="BlockSrcs" Name="zynq_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zynq_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zynq_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_v_vid_in_axi4s_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="zynq_vga2hdmi_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="zynq_cmos_capture_0_0"/>
 </GenRun>

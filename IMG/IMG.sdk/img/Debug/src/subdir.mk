@@ -7,19 +7,28 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
+../src/emio_sccb_cfg.c \
 ../src/helloworld.c \
+../src/ov5640_init.c \
 ../src/platform.c \
-../src/sd_card.c 
+../src/sd_card.c \
+../src/vdma_api.c 
 
 OBJS += \
+./src/emio_sccb_cfg.o \
 ./src/helloworld.o \
+./src/ov5640_init.o \
 ./src/platform.o \
-./src/sd_card.o 
+./src/sd_card.o \
+./src/vdma_api.o 
 
 C_DEPS += \
+./src/emio_sccb_cfg.d \
 ./src/helloworld.d \
+./src/ov5640_init.d \
 ./src/platform.d \
-./src/sd_card.d 
+./src/sd_card.d \
+./src/vdma_api.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

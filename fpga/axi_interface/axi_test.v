@@ -26,53 +26,53 @@ module axi_test#(
   input  wire                                      rst_n           ,//reset, low valid
 
   input  wire                                      start           ,
-  //AXIд��ַͨ��
-  output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_awid        ,//д��ַͨ��id
-  output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_awaddr      ,//д��ַ
-  output wire      [  07:00]                       axi_awlen       ,//ͻ������
-  output wire      [  02:00]                       axi_awsize      ,//ͻ���ߴ�
-  output wire      [  01:00]                       axi_awburst     ,//ͻ������
-  output wire                                      axi_awlock      ,//������
-  output wire      [  03:00]                       axi_awcache     ,//��������
-  output wire      [  02:00]                       axi_awprot      ,//��������
-  output wire      [  03:00]                       axi_awqos       ,//Qos��ʶ��
-  output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_awuser      ,//�û��Զ���
-  output wire                                      axi_awvalid     ,//д��ַ��Ч
-  input  wire                                      axi_awready     ,//�ӻ�׼���ý��յ�ַ
-//AXIд����ͨ��
-  output wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_wdata       ,//д����
-  output wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_wstrb       ,//���ݶ���Ч
-  output wire                                      axi_wlast       ,//ͻ����������һ��
-  output wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_wuser       ,//�û��Զ���
-  output wire                                      axi_wvalid      ,//д������Ч
-  input  wire                                      axi_wready      ,//�ӻ�׼���ý�������
-//AXI��Ӧͨ��
-  input  wire      [C_M_AXI_ID_WIDTH     -1 : 00]  axi_bid         ,//��ӦID
-  input  wire      [  01:00]                       axi_bresp       ,//д��Ӧ
-  input  wire      [C_M_AXI_BUSER_WIDTH - 1 : 00]  axi_buser       ,//�û��Զ���
-  input  wire                                      axi_bvalid      ,//д��Ӧ��Ч
-  output wire                                      axi_bready      ,//д��Ӧ��Ч�źţ���ʾ�����Ѿ�׼���ý���д��Ӧ�ź��ˣ�
-//AXI����ַͨ��
-  output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_arid        ,//����ַͨ��id
-  output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_araddr      ,//����ַ
-  output wire      [  07:00]                       axi_arlen       ,//ͻ������
-  output wire      [  02:00]                       axi_arsize      ,//ͻ���ߴ�
-  output wire      [  01:00]                       axi_arburst     ,//ͻ������
-  output wire                                      axi_arlock      ,//������
-  output wire      [  03:00]                       axi_arcache     ,//��������
-  output wire      [  02:00]                       axi_arprot      ,//��������
-  output wire      [  03:00]                       axi_arqos       ,//Qos��ʶ��
-  output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_aruser      ,//�û��Զ���
-  output wire                                      axi_arvalid     ,//����ַ��Ч
-  input  wire                                      axi_arready     ,//�ӻ�׼���ý��յ�ַ
-//AXI������ͨ��
-  input  wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_rid         ,//��ͨ��id
-  input  wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_rdata       ,//д����
-  input  wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_rresp       ,//���ݶ���Ч
-  input  wire                                      axi_rlast       ,//ͻ����������һ��
-  input  wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_ruser       ,//�û��Զ���
-  input  wire                                      axi_rvalid      ,//д������Ч
-  output wire                                      axi_rready       //�ӻ�׼���ý�������
+  //AXI
+  output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_awid        ,//
+  output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_awaddr      ,//
+  output wire      [  07:00]                       axi_awlen       ,//
+  output wire      [  02:00]                       axi_awsize      ,//
+  output wire      [  01:00]                       axi_awburst     ,//
+  output wire                                      axi_awlock      ,//
+  output wire      [  03:00]                       axi_awcache     ,//
+  output wire      [  02:00]                       axi_awprot      ,//
+  output wire      [  03:00]                       axi_awqos       ,//
+  output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_awuser      ,//
+  output wire                                      axi_awvalid     ,//
+  input  wire                                      axi_awready     ,//
+//AXI
+  output wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_wdata       ,//
+  output wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_wstrb       ,//
+  output wire                                      axi_wlast       ,//
+  output wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_wuser       ,//
+  output wire                                      axi_wvalid      ,//
+  input  wire                                      axi_wready      ,//
+//AXI
+  input  wire      [C_M_AXI_ID_WIDTH     -1 : 00]  axi_bid         ,//
+  input  wire      [  01:00]                       axi_bresp       ,//
+  input  wire      [C_M_AXI_BUSER_WIDTH - 1 : 00]  axi_buser       ,//
+  input  wire                                      axi_bvalid      ,//
+  output wire                                      axi_bready      ,//
+//AXI
+  output wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_arid        ,//
+  output wire      [C_M_AXI_ADDR_WIDTH - 1 : 00]   axi_araddr      ,//
+  output wire      [  07:00]                       axi_arlen       ,//
+  output wire      [  02:00]                       axi_arsize      ,//
+  output wire      [  01:00]                       axi_arburst     ,//
+  output wire                                      axi_arlock      ,//
+  output wire      [  03:00]                       axi_arcache     ,//
+  output wire      [  02:00]                       axi_arprot      ,//
+  output wire      [  03:00]                       axi_arqos       ,//
+  output wire      [C_M_AXI_AWUSER_WIDTH-1:00]     axi_aruser      ,//
+  output wire                                      axi_arvalid     ,//
+  input  wire                                      axi_arready     ,//
+//AXI
+  input  wire      [C_M_AXI_ID_WIDTH   - 1 : 00]   axi_rid         ,//
+  input  wire      [C_M_AXI_DATA_WIDTH - 1 : 00]   axi_rdata       ,//
+  input  wire      [C_M_AXI_DATA_WIDTH/8-1:00]     axi_rresp       ,//
+  input  wire                                      axi_rlast       ,//
+  input  wire      [C_M_AXI_WUSER_WIDTH -1 : 00]   axi_ruser       ,//
+  input  wire                                      axi_rvalid      ,//
+  output wire                                      axi_rready       //
 
 );
   reg                                              start_d         ;
@@ -101,10 +101,43 @@ module axi_test#(
   parameter                                          READ           = 2'd2  ;
   parameter                                          WAIT           = 2'd3  ;
   reg              [  01:00]                       state_c,state_n  ;
-  
+  reg              [  07:00]                       cnt;
+  reg              [  07:00]                       cnt_time;
+
+  always @(posedge clk  ) begin
+    if(!rst_n)begin
+      cnt <= 8'd0;
+    end
+    else begin
+      if(state_c == WAIT)begin
+        cnt <= cnt + 1'b1;
+      end
+      else begin
+        cnt <= 8'd0;
+      end
+    end
+  end
+
+  always @(posedge clk  ) begin
+    if(!rst_n)begin
+      cnt_time <= 8'd0;
+    end
+    else if(pos_start)begin
+      cnt_time <= 8'd0;
+    end
+    else if(cnt_time >= 10 - 1)begin
+      cnt_time <= cnt_time ;
+    end
+    else if((cnt == 8'd100))begin
+      cnt_time <= cnt_time + 1'b1;
+    end
+    else begin
+      cnt_time <= cnt_time ;
+    end
+  end
 
 
-    always @ (posedge clk or negedge rst_n)begin
+    always @ (posedge clk  )begin
       if(!rst_n)begin
         state_c <= IDLE;
       end
@@ -134,17 +167,22 @@ module axi_test#(
             state_n = state_c;
         end
         WAIT : begin
-          state_n = WRITE;
+          if((cnt == 8'd100) && (cnt_time < 10 - 1))
+            state_n = WRITE;
+          else if((cnt_time >= 10 - 1))
+            state_n = IDLE;
+          else
+            state_n = state_c;
         end
       default : state_n = IDLE;
       endcase
     end
     
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       wr_start <= 'd0;
     end
-    else if(pos_start)begin
+    else if(pos_start || (cnt == 8'd100))begin
        wr_start <= 'd1;
     end
     else begin
@@ -152,7 +190,7 @@ module axi_test#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       wr_addr <= 32'h0;
     end
@@ -167,11 +205,14 @@ module axi_test#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       wr_data <= 32'b0;
     end
-    else if((state_n ==WRITE) && wr_ready)begin
+    else if(pos_start)begin
+      wr_data <= 32'b0;
+    end
+    else if(wr_ready )begin
       wr_data <= wr_data +1'b1;
     end
     else begin
@@ -179,7 +220,7 @@ module axi_test#(
     end
   end                                                               //always end
   
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       rd_start <= 'd0;
     end
@@ -191,7 +232,7 @@ module axi_test#(
     end
   end                                                               //always end
 
-  always @ (posedge clk or negedge rst_n)begin
+  always @ (posedge clk  )begin
     if(!rst_n)begin
       rd_addr <= 32'h0;
     end
@@ -219,21 +260,21 @@ m_axi_ctrl#(
 inst_m_axi_ctrl(
   .clk                                               (clk            ),
   .rst_n                                             (rst_n          ),
-  //�û��ӿ�
+  //锟矫伙拷锟接匡拷
   .rd_start                                          (rd_start       ),
   .rd_addr                                           (rd_addr        ),
   .rd_data                                           (rd_data        ),
   .rd_len                                            (rd_len         ),
   .rd_done                                           (rd_done        ),
   .rd_vld                                            (rd_vld         ),
-  //�û��ӿ�
+  //锟矫伙拷锟接匡拷
   .wr_start                                          (wr_start       ),
   .wr_addr                                           (wr_addr        ),
   .wr_len                                            (wr_len         ),
   .wr_data                                           (wr_data        ),
   .wr_ready                                          (wr_ready       ),
   .wr_done                                           (wr_done        ),
-  //AXI����ַͨ��
+  //AXI锟斤拷锟斤拷址通锟斤拷
   .axi_arid                                          (axi_arid       ),
   .axi_araddr                                        (axi_araddr     ),
   .axi_arlen                                         (axi_arlen      ),
@@ -246,7 +287,7 @@ inst_m_axi_ctrl(
   .axi_aruser                                        (axi_aruser     ),
   .axi_arvalid                                       (axi_arvalid    ),
   .axi_arready                                       (axi_arready    ),
-//AXI������ͨ��
+//AXI锟斤拷锟斤拷锟斤拷通锟斤拷
   .axi_rid                                           (axi_rid        ),
   .axi_rdata                                         (axi_rdata      ),
   .axi_rresp                                         (axi_rresp      ),
@@ -254,7 +295,7 @@ inst_m_axi_ctrl(
   .axi_ruser                                         (axi_ruser      ),
   .axi_rvalid                                        (axi_rvalid     ),
   .axi_rready                                        (axi_rready     ),
-//AXIд��ַͨ��
+//AXI写锟斤拷址通锟斤拷
   .axi_awid                                          (axi_awid       ),
   .axi_awaddr                                        (axi_awaddr     ),
   .axi_awlen                                         (axi_awlen      ),
@@ -267,14 +308,14 @@ inst_m_axi_ctrl(
   .axi_awuser                                        (axi_awuser     ),
   .axi_awvalid                                       (axi_awvalid    ),
   .axi_awready                                       (axi_awready    ),
-//AXIд����ͨ��
+//AXI写锟斤拷锟斤拷通锟斤拷
   .axi_wdata                                         (axi_wdata      ),
   .axi_wstrb                                         (axi_wstrb      ),
   .axi_wlast                                         (axi_wlast      ),
   .axi_wuser                                         (axi_wuser      ),
   .axi_wvalid                                        (axi_wvalid     ),
   .axi_wready                                        (axi_wready     ),
-//AXI��Ӧͨ��
+//AXI锟斤拷应通锟斤拷
   .axi_bid                                           (axi_bid        ),
   .axi_bresp                                         (axi_bresp      ),
   .axi_buser                                         (axi_buser      ),
