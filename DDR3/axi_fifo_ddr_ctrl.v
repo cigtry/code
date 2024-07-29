@@ -36,8 +36,10 @@ module axi_fifo_ddr_ctrl#(
   input                                          rd_clk          ,//fifo读取时钟
   input                                          rst_n           ,
 
-  input                                          rd_enable       ,
+  input                                          rd_begin        ,
   input          [C_M_AXI_ADDR_WIDTH - 1 : 00]   rd_addr_begin   ,
+  input          [C_M_AXI_ADDR_WIDTH - 1 : 00]   rd_addr_end     ,
+  output reg                                     rd_data_busy    ,
   output         [  07:00]                       rd_data_out     ,
   output reg                                     rd_valid_out    ,
 
@@ -51,15 +53,15 @@ module axi_fifo_ddr_ctrl#(
 );
 
   
-  reg                                            rd_enable_d     ;
-  wire                                           pos_rd_enable   ;
-  assign                                             pos_rd_enable  = rd_enable && !rd_enable_d;
+  reg                                            rd_begin_d      ;
+  wire                                           pos_rd_begin    ;
+  assign                                             pos_rd_begin   = rd_begin && !rd_begin_d;
   always @(posedge clk ) begin
-    rd_enable_d <= rd_enable;
+    rd_begin_d <= rd_begin;
   end
 
   wire           [  10: 0]                       burst_size_bytes  ;
-  assign                                             burst_size_bytes= rd_len * (C_M_AXI_DATA_WIDTH>>3);
+  assign                                             burst_size_bytes= rd_len * (C_M_AXI_DATA_WIDTH>>3); //地址增量
 
   wire                                           rd_fifo_full    ;
   wire                                           rd_fifo_empty   ;
@@ -69,7 +71,7 @@ module axi_fifo_ddr_ctrl#(
   assign                                             rd_fifo_wr_en  = rd_vld && (!rd_fifo_full);
   wire           [  15:00]                       rd_fifo_dout    ;
   wire                                           rd_fifo_rd_en   ;
-  assign                                             rd_fifo_rd_en  = rd_enable && (!rd_fifo_empty);
+  assign                                             rd_fifo_rd_en  = (!rd_fifo_empty);
   wire           [  08:00]                       rd_fifo_rd_data_count  ;
   wire           [  05:00]                       rd_fifo_wr_data_count  ;
   wire                                           rd_fifo_wr_rst_busy  ;
@@ -91,13 +93,29 @@ rd_ddr3_fifo u_rd_ddr3_fifo (
   .rd_rst_busy                                       (rd_fifo_rd_rst_busy) // output wire rd_rst_busy
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
+  //检测到开始信号的上升沿开始利用axi发送读取数据的信号
+  always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+      rd_data_busy <= 1'b0;
+    end
+    else if(!rd_data_busy && pos_rd_begin)begin
+      rd_data_busy <= 1'b1;
+    end
+    else if(rd_addr == rd_addr_end)begin
+      rd_data_busy  <= 1'b0;
+    end
+    else begin
+      rd_data_busy <= rd_data_busy;
+    end
+  end
+
   always @(posedge clk or negedge rst_n)begin
     if(!rst_n)
         rd_addr <= {C_M_AXI_ADDR_WIDTH{1'b0}};
-    else if(pos_rd_enable) begin
+    else if(pos_rd_begin) begin
         rd_addr <= rd_addr_begin;
     end
-    else if(rd_done)begin
+    else if(rd_done&&rd_data_busy)begin
       rd_addr <= rd_addr + burst_size_bytes;
     end
     else begin
@@ -106,10 +124,10 @@ rd_ddr3_fifo u_rd_ddr3_fifo (
   end
 
   assign                                             rd_len         = 8'd1;
-  assign                                             rd_start       = (!rd_fifo_full) && (!rd_busy) && rd_enable;
+  assign                                             rd_start       = (!rd_fifo_full) && (!rd_busy) && rd_data_busy;
   assign                                             rd_data_out    = rd_fifo_dout[7:0];
 always @(posedge rd_clk )begin
-  rd_valid_out = rd_enable && !rd_fifo_empty;
+  rd_valid_out = rd_fifo_rd_en;
 end
                                                                    
 endmodule

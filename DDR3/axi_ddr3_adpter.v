@@ -42,8 +42,10 @@ module axi_ddr3_adpter#(
   input          [  07:00]                       wr_data_in      ,
   input          [C_M_AXI_ADDR_WIDTH - 1 : 00]   wr_addr_begin   ,
 
-  input                                          rd_enable       ,
+  input                                          rd_begin        ,
   input          [C_M_AXI_ADDR_WIDTH - 1 : 00]   rd_addr_begin   ,
+  input          [C_M_AXI_ADDR_WIDTH - 1 : 00]   rd_addr_end     ,
+  output                                         rd_data_busy    ,
   output         [  07:00]                       rd_data_out     ,
   output                                         rd_valid_out    ,
   //AXI
@@ -196,13 +198,14 @@ axi_fifo_ddr_ctrl#(
   .C_M_AXI_WUSER_WIDTH                               (C_M_AXI_WUSER_WIDTH),
   .C_M_AXI_RUSER_WIDTH                               (C_M_AXI_RUSER_WIDTH),
   .C_M_AXI_BUSER_WIDTH                               (C_M_AXI_BUSER_WIDTH  )) 
-  u_axi_fifo_ddr_ctrl(
+   u_axi_fifo_ddr_ctrl(
   .clk                                               (clk            ),
   .rd_clk                                            (rd_clk         ),
   .rst_n                                             (rst_n          ),
-  .rd_enable                                         (rd_enable      ),
-  .rd_busy                                           (rd_busy        ),
+  .rd_begin                                          (rd_begin       ),
   .rd_addr_begin                                     (rd_addr_begin  ),
+  .rd_addr_end                                       (rd_addr_end    ),
+  .rd_data_busy                                      (rd_data_busy   ),
   .rd_data_out                                       (rd_data_out    ),
   .rd_valid_out                                      (rd_valid_out   ),
   .rd_start                                          (rd_start       ),
@@ -210,6 +213,7 @@ axi_fifo_ddr_ctrl#(
   .rd_data                                           (rd_data        ),
   .rd_len                                            (rd_len         ),
   .rd_done                                           (rd_done        ),
+  .rd_busy                                           (rd_busy        ),
   .rd_vld                                            (rd_vld         ) 
 );
 
